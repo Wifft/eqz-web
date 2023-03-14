@@ -1,0 +1,28 @@
+uuid: fff3eb41-b686-42cd-a48e-e587be88453d
+handle: Awards\Award
+type: entry
+name: Logros
+
+drafts: false
+showImport: false
+showExport: false
+
+primaryNavigation:
+    label: Logros
+    icon: icon-trophy
+    order: 314
+
+fields:
+    image:
+        label: 'Imagen'
+        span: 'right'
+        required: true
+        type: 'fileupload'
+        mode: 'image'
+        useCaption: false
+    rosters:
+        label: 'Rosters'
+        span: 'left'
+        required: true
+        type: 'entries'
+        source: 'Rosters\Roster'

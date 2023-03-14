@@ -1,0 +1,18 @@
+<article class="container mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-[30%_70%] p-4 lg:p-10 items-center">
+        <div>
+            <picture>
+                <img class="w-full"
+                    src="{{ aboutUs.image[0].path }}"
+                    alt="eQuizers eSports Club"
+                    title="eQuizers eSports Club"/>
+            </picture>
+        </div>
+        <div class="text-white">
+            <h2 class="text-4xl pb-2 break-all">{{ aboutUs.title }}</h2>
+            <div class="text-justify">
+                {{ aboutUs.description|raw }}
+            </div>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,6 @@
+{% set highlightedCreators = highlightedCreators.where('home_highlighted', true).limit(6).get() %}
+<div class="grid grid-cols-1 gap-x-0 lg:grid-cols-6 lg:gap-x-12">
+    {% for highlightedCreator in highlightedCreators %}
+        {% partial '@card' creator=highlightedCreator idx=loop.index %}
+    {% endfor %}
+</div>

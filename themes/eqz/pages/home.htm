@@ -1,0 +1,34 @@
+title = "Bienvenido"
+url = "/"
+layout = "main"
+is_hidden = 0
+
+[blogPosts blogPostsGrid]
+postsPerPage = 3
+
+[collection highlightedCreators]
+handle = "Creators\Creator"
+
+[blogPosts blogCategoryGrid]
+categoryFilter = "valorant"
+postsPerPage = 3
+==
+<section id="blogPostsGrid_component"
+    class="container mx-auto my-4 mt-10 text-white">
+    {% component 'blogPostsGrid' %}
+</section>
+<section id="highlightedPlayers_component"
+    class="container mx-auto my-4 text-white">
+    <h2 class="text-6xl text-center font-bold uppercase py-10 break-all"
+        style="text-shadow: 0px 0px 20px rgba(68,196,253,0.85);">
+        Equizers
+        <br/>
+        Creators
+    </h2>
+    {% component 'contenteditor' file="home/creators_description.htm" fixture="p" class="text-center pb-4 home-text-shadow" %}
+    {% component 'highlightedCreators' %}
+</section>
+<section id="blogCategoryGrid_component"
+    class="container mx-auto my-4 mt-10 text-white">
+    {% component 'blogCategoryGrid' %}
+</section>

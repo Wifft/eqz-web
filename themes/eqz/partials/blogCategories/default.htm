@@ -1,0 +1,14 @@
+<div class="bg-secondary--translucent px-8 py-4 shadow-xl">
+    <h2 class="mb-4 text-white text-2xl font-bold break-all">
+        Categorías
+    </h2>
+    {% if __SELF__.categories|length > 0 %}
+        <ul class="text-white text-lg">
+            {% partial '@items' categories = __SELF__.categories %}
+        </ul>
+    {% else %}
+        <p class="text-white">
+            No se han encontrado categorías.
+        </p>
+    {% endif %}
+</div>

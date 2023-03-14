@@ -1,0 +1,56 @@
+title = "Rosters"
+url = "/rosters"
+layout = "main"
+is_hidden = 0
+
+[collection rosters]
+handle = "Rosters\Roster"
+
+[viewBag]
+activeMenu = "rosters"
+==
+<section id="rosters_page"
+    class="container mx-auto my-4">
+    {% component "rosters" %}
+</section>
+
+{% put styles %}
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        type="text/css"/>
+{% endput %}
+
+{% put scripts %}
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.slick-slider').slick(
+            {
+                "infinite": true,
+                "slidesToShow": 5,
+                "slidesToScroll": 1,
+                "autoplay": false,
+                "arrows": true,
+                "dots": false,
+                "responsive": [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 512,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            }
+        );
+        $('.slick-initialized').css({'display': 'grid', 'grid-template-columns': 'auto auto auto'});
+        $('.slick-prev').text('←').addClass(`bg-secondary p-4 m-auto hover:bg-primary hover:text-white`);
+        $('.slick-next').text('→').addClass(`bg-secondary p-4 m-auto hover:bg-primary hover:text-white`);
+    </script>
+{% endput %}

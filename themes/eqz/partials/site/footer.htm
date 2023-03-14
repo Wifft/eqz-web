@@ -1,0 +1,57 @@
+<footer class="mt-auto p-4 bg-noisy--primary shadow md:px-6 md:py-8 border-t-2 border-t-white">
+    <div class="flex items-center justify-center mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 self-center text-center gap-4 md:flex md:flex-wrap">
+            {% for idx,brand in brands %}
+                <picture class="h-100 {{ idx is same as(brands|length - 1) ? 'md:border-l-2 md:border-l-white' : null }}">
+                    <a class="block mx-6"
+                        href="{{ brand.url }}"
+                        target="_blank"
+                        rel="external noopener noreferrer">
+                        <img class="h-16 m-auto md:m-0"
+                            src="{{ brand.image[0].getThumb(400, 400, {'mode':'auto','quality':65,'extension':'webp'}) }}"
+                            alt="{{ brand.title }}"
+                            title="{{ brand.title }}"/>
+                    </a>
+                </picture>
+            {% endfor %}
+        </div>
+    </div>
+    <hr class="my-8 border-white mx-auto"
+        style="max-width:685px;"/>
+    <div class="flex items-center justify-center mb-8">
+        <a class="flex items-center mb-4 lg:mb-0"
+            href="{{ 'home'|page(false) }}">
+            <picture>
+                <img class="h-8 mr-3"
+                    src="{{ 'assets/img/eqz_logo.png'|theme }}"
+                    alt="{{ env('APP_NAME') }}"
+                    title="{{ env('APP_NAME') }}"/>
+            </picture>
+            <span class="self-center text-2xl text-white font-semibold whitespace-nowrap">
+                {{ env('APP_NAME') }}
+            </span>
+        </a>
+    </div>
+    <div class="flex items-center justify-center mb-8">
+        <ul class="grid grid-cols-1 md:grid-cols-3 self-center text-center gap-4 md:flex md:flex-wrap md:items-center text-sm text-white uppercase">
+            {% for legalText in legalTexts %}
+                <li>
+                    <a class="mr-4 hover:underline md:mr-6"
+                        href="{{ 'legal-text'|page({'slug': legalText.slug}) }}">
+                        {{ legalText.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <span class="block text-sm text-gray-400 text-center">
+        &copy;&nbsp;{{ 'now'|date('Y') }} by
+        <a class="hover:underline"
+            href="https://twitter.com/wifft_"
+            target="_blank"
+            rel="external noopener noreferrer">
+            Wifft
+        </a>
+        . All Rights Reserved.
+    </span>
+</footer>

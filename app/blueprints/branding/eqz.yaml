@@ -1,0 +1,40 @@
+uuid: e4439b62-a6a1-4ab4-887d-674987a2311b
+handle: 'Branding\Eqz'
+type: single
+name: 'Branding'
+
+drafts: false
+
+primaryNavigation:
+    label: 'Branding'
+    icon: 'icon-paint-brush'
+    order: 317
+
+fields:
+    contents:
+        label: 'Contenidos'
+        span: 'full'
+        required: true
+        type: 'repeater'
+        titleFrom: 'Contenidos'
+        form:
+            fields:
+                name:
+                    label: 'Nombre'
+                    span: 'full'
+                    required: true
+                    type: 'text'
+                image:
+                    label: 'Imagen'
+                    span: 'full'
+                    required: true
+                    type: 'mediafinder'
+                    mode: 'image'
+                    useCaption: false
+                file:
+                    label: 'Archivo'
+                    span: 'full'
+                    required: true
+                    type: 'mediafinder'
+                    mode: 'file'
+                    useCaption: false

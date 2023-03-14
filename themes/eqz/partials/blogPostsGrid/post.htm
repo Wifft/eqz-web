@@ -1,0 +1,32 @@
+<article class="border border-overlay--v2 rounded-3xl bg-cover bg-center shadow-xl"
+    style="background-image: url('{{ post.featured_images[0].getThumb('auto', 'auto', {'mode':'auto','quality':65,'extension':'webp'}) }}')">
+    <div class="flex h-[436px] lg:h-full rounded-3xl bg-overlay hover:bg-overlay--v2 transition-all duration-1000 hover:transition-all hover:duration-1000">
+        <div class="self-end p-4">
+            <span class="text-sm">
+                {% for category in post.categories %}
+                    <a class="hover:underline"
+                        href="{{ category.url }}">
+                        {{ category.name }}
+                    </a>
+                {% endfor %}
+                ({{ post.published_at|date('d/m/Y') }})
+            </span>
+            {% if first is same as (true) %}
+                <h1 class="text-4xl text-bold uppercase break-all">
+                    <a class="hover:underline"
+                        href="{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                </h1>
+            {% else %}
+                <h2 class="text-4xl text-bold uppercase break-all">
+                    <a class="hover:underline"
+                        href="{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                </h2>
+            {% endif %}
+            <p class="text-sm">{{ post.summary|raw }}</p>
+        </div>
+    </div>
+</article>

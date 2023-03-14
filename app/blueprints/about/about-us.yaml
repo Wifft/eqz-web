@@ -1,0 +1,33 @@
+uuid: f2496b1c-86f1-481d-b522-15a76f9379f3
+handle: About\AboutUs
+type: single
+name: 'El Club'
+
+drafts: false
+showImport: false
+showExport: false
+
+primaryNavigation:
+    label: 'El club'
+    icon: icon-building
+    order: 315
+
+validation:
+    rules:
+        description: 'string|required|max:65535'
+
+fields:
+    description:
+        label: 'Descripción'
+        type: 'richeditor'
+        span: 'adaptive'
+        required: true
+        tab: 'Contenido'
+    image:
+        label: 'Imagen'
+        span: 'left'
+        required: true
+        type: 'fileupload'
+        mode: 'image'
+        useCaption: false
+        tab: 'Gestión'

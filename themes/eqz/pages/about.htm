@@ -1,0 +1,22 @@
+title = "Sobre nosotros"
+url = "/sobre-nosotros"
+layout = "main"
+is_hidden = 0
+
+[section aboutUs]
+handle = "About\AboutUs"
+
+[collection awards]
+handle = "Awards\Award"
+
+[viewBag]
+activeMenu = "club"
+==
+<section id="aboutUs_page"
+    class="bg-secondary--translucent">
+    {% component 'aboutUs' %}
+</section>
+<section id="awards_component"
+    class="bg-primary--translucent">
+    {% component 'awards' %}
+</section>

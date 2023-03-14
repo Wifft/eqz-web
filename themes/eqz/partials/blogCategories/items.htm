@@ -1,0 +1,13 @@
+{% for category in categories %}
+    <li>
+        <a class="hover:underline"
+            href="{{ category.url }}">
+            {{ category.name }}
+        </a>
+        {% if category.children|length > 0 %}
+            <ul>
+                {% partial '@items' categories=category.children %}
+            </ul>
+        {% endif %}
+    </li>
+{% endfor %}

@@ -1,0 +1,35 @@
+<article class="mt-10">
+    <div class="relative overflow-hidden rounded-lg group">
+        <a href="{{ 'blog/post'|page({'slug': post.slug}) }}">
+            <picture>
+                <img class="object-cover h-auto lg:h-96 w-full transition-all duration-300 ease-linear group-hover:scale-110"
+                    src="{{ post.featured_images[0].getThumb('auto','auto',{'mode':'auto','quality':65,'extension':'webp'}) }}"
+                    alt="{{ post.title }}"
+                    title="{{ post.title }}"/>
+            </picture>
+        </a>
+    </div>
+    <div class="relative mt-4 text-white text-center lg:text-start">
+        <span class="text-gray-300 text-sm">
+            {% for category in post.categories %}
+                <a class="hover:underline"
+                    href="{{ category.url }}">
+                    {{ category.name }}
+                </a>
+            {% endfor %}
+            ({{ post.published_at|date('d/m/Y') }})
+        </span>
+        <h3 class="text-3xl uppercase font-bold home-text-shadow break-all">
+            <a class="hover:underline"
+                href="{{ 'blog/post'|page({'slug': post.slug}) }}">
+                {{ post.title }}
+            </a>
+        </h3>
+        <p class="py-6">
+            <a class="bg-secondary text-primary p-2 uppercase font-bold rounded-xl shadow-xl transition-all duration-300 hover:bg-primary hover:text-secondary"
+                href="{{ post.url }}">
+                Leer más +
+            </a>
+        </p>
+    </div>
+</article>

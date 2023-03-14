@@ -1,0 +1,32 @@
+{% set post = __SELF__.post %}
+{% if post is empty %}
+    {% do abort(404) %}
+{% endif %}
+{% put pageTitle = post.title %}
+<article class="bg-secondary--translucent p-4 shadow-xl">
+    <h1 class="text-primary text-4xl uppercase font-bold break-all">
+        {{ post.title }}
+    </h1>
+    <p class="py-2 text-gray-600">
+        {% if post.categories|length %}
+            {% for category in post.categories %}
+                <a class="bg-gray-600 text-white text-xs font-medium mr-2 px-4 py-1 rounded"
+                    href="{{ category.url }}">
+                    {{ category.name }}
+                </a>
+            {% endfor %}
+        {% endif %}
+        <span class="text-sm">{{ post.published_at|date('d/m/Y') }}</span>
+    </p>
+    {% if post.featured_images|length %}
+        <picture>
+            <img src="{{ post.featured_images[0].getThumb('auto','auto',{'mode':'auto','quality':65,'extension':'webp'}) }}"
+                alt="{{ post.title }}"
+                title="{{ post.title }}"/>
+        </picture>
+    {% endif %}
+    {% partial 'share-buttons' title=post.title page=''|page %}
+    <div class="text-primary text-justify">
+        {{ post.content_html|raw }}
+    </div>
+</article>

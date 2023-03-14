@@ -1,0 +1,19 @@
+uuid: 2178d38c-c2b0-4491-848b-63a6f94cc4e3
+handle: LegalTexts\Text
+type: entry
+name: 'Textos legales'
+
+drafts: false
+
+primaryNavigation:
+    label: 'Textos legales'
+    icon: 'icon-pencil-square-o'
+    order: 318
+
+fields:
+    description:
+        label: 'Contenido'
+        type: 'richeditor'
+        required: true
+        span: 'adaptive'
+        size: 'huge'

@@ -1,0 +1,13 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"
+    rel="stylesheet"
+    type="text/css"/>
+<link rel="stylesheet"
+    href="{{ ['assets/css/app.css']|theme }}.css"
+    type="text/css"/>
+{% if this.page.baseFileName is same as("rosters") %}
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        type="text/css"/>
+{% endif  %}
+
+{% styles %}

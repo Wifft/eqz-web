@@ -1,0 +1,38 @@
+{% set creator = creatorsProfile %}
+{% if creator is empty %}
+    {% do abort(404) %}
+{% endif %}
+{% put pageTitle = creator.nickname %}
+<article class="container mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 p-4 lg:p-10 gap-4 lg:gap-16 items-center">
+        <div>
+            <picture>
+                <img class="w-full"
+                    src="{{ creator.image[0].getThumb(720,720,{'mode':'auto','quality':65,'extension':'webp'}) }}"
+                    alt="{{ creator.nickname }}"
+                    title="{{ creator.nickname }}"/>
+            </picture>
+            {% partial 'share-buttons' title=creator.nickname page=''|page %}
+        </div>
+        <div class="text-white">
+            <h1 class="text-4xl font-bold">{{ creator.nickname }}</h1>
+            <div class="my-2">
+                <h2 class="text-xl pb-8 break-all">{{ creator.title }}</h2>
+                <div class="text-justify">
+                    {{ creator.description|raw }}
+                </div>
+                <div class="flex text-gray-200 text-2xl my-4 lg:my-8">
+                    {% for social in creator.socials %}
+                        <a class="mr-2 text-white transition-all duration-200 ease-linear hover:text-primary"
+                            href="{{ social.url }}"
+                            target="_blank"
+                            rel="external nofollow noopener noreferrer"
+                            title="{{ social.name }}">
+                            <i class="fab fa-{{ social.name|slug }}"></i>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,38 @@
+<article class="p-6 mx-auto space-y-6 lg:space-y-12">
+    <div class="block max-w-sm gap-3 mx-auto lg:max-w-full lg:grid lg:grid-cols-12 bg-secondary--translucent shadow-xl">
+        <picture class="lg:col-span-4 group">
+            <a href="{{ post.url }}">
+                <img class="object-cover w-full h-64 lg:h-96 bg-gray-500 transition-all duration-300 ease-linear group-hover:scale-110"
+                    src="{{ post.featured_images[0].getThumb('auto', 'auto', {'mode':'auto','quality':65,'extension':'webp'}) }}"
+                    alt="{{ post.title }}"
+                    title="{{ post.title }}"/>
+            </a>
+        </picture>
+        <div class="p-6 space-y-2 lg:col-span-5">
+            <span class="text-xs text-primary">
+                {% for category in post.categories %}
+                    <a class="hover:underline"
+                        href="{{ category.url }}">
+                        {{ category.name }}
+                    </a>
+                {% endfor %}
+                ({{ post.published_at|date('d/m/Y') }})
+            </span>
+            <h3 class="text-2xl font-semibold text-primary lg:text-4xl break-all">
+                <a class="hover:underline focus:underline"
+                    href="{{ post.url }}">
+                    {{ post.title }}
+                </a>
+            </h3>
+            <p class="text-primary">
+                {{ post.summary|raw }}
+            </p>
+            <p class="py-4">
+                <a class="bg-primary text-white p-2 uppercase hover:bg-white hover:text-primary transition-all duration-300"
+                    href="{{ post.url }}">
+                    Leer más
+                </a>
+            </p>
+        </div>
+    </div>
+</article>

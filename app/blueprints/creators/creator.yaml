@@ -1,0 +1,62 @@
+uuid: 7c082c62-8273-46cd-ada0-e0bfd67861cf
+handle: Creators\Creator
+type: entry
+name: 'Creadores'
+
+drafts: false
+showImport: false
+showExport: false
+
+primaryNavigation:
+    label: Creadores
+    icon: icon-users
+    order: 311
+
+validation:
+    rules:
+        nickname: 'string|required|max:255'
+
+fields:
+    nickname:
+        label: 'Nick'
+        span: 'full'
+        required: true
+        type: 'text'
+        size: 'small'
+    description:
+        label: 'Contenido'
+        span: 'full'
+        required: true
+        type: 'richeditor'
+    image:
+        label: 'Imagen'
+        span: 'right'
+        required: true
+        type: 'fileupload'
+        mode: 'image'
+        useCaption: false
+    socials:
+        label: 'Redes sociales'
+        span: 'left'
+        required: false
+        type: 'repeater'
+        titleFrom: 'Redes sociales'
+        form:
+            fields:
+                name:
+                    label: 'Nombre'
+                    span: 'full'
+                    required: true
+                    type: 'text'
+                url:
+                    label: 'URL'
+                    span: 'full'
+                    required: true
+                    type: 'text'
+    home_highlighted:
+        label: 'Destacado en home'
+        span: 'right'
+        required: false
+        type: 'switch'
+        on: 'Sí'
+        off: 'No'

@@ -1,0 +1,48 @@
+uuid: 4ba9c21d-5269-4156-9b50-f7ced050a142
+handle: Downloads\File
+type: entry
+name: 'Archivos'
+
+drafts: false
+showImport: false
+showExport: false
+
+primaryNavigation:
+    label: Descargas
+    icon: icon-download
+    order: 316
+
+navigation:
+    parent: Downloads\File
+    icon: icon-file
+    order: 10
+
+fields:
+    thumb:
+        label: 'Miniatura'
+        span: 'left'
+        required: true
+        type: 'fileupload'
+        mode: 'image'
+        useCaption: false
+    image_pc:
+        label: 'Imagen (PC)'
+        span: 'right'
+        required: true
+        type: 'fileupload'
+        mode: 'image'
+        useCaption: false
+    image_mobile:
+        label: 'Imagen (Móvil)'
+        span: 'left'
+        required: true
+        type: 'fileupload'
+        mode: 'image'
+        useCaption: false
+    category:
+        label: 'Categoría'
+        span: 'full'
+        required: false
+        type: 'entries'
+        maxItems: 1
+        source: 'Downloads\Category'

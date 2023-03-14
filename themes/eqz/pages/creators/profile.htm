@@ -1,0 +1,17 @@
+title = "Creador"
+url = "/creadores/:slug"
+layout = "main"
+is_hidden = 0
+
+[section creatorsProfile]
+handle = "Creators\Creator"
+entrySlug = "{{ :slug }}"
+entryColumn = "slug"
+
+[viewBag]
+activeMenu = "creators"
+==
+<section id="creatorsProfile_page"
+    class="bg-secondary--translucent">
+    {% component 'creatorsProfile' %}
+</section>

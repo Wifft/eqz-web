@@ -1,0 +1,26 @@
+uuid: 6af6a13c-8988-49cd-861f-cba281b875d8
+handle: 'Brands\Brand'
+type: entry
+name: 'Marcas'
+
+drafts: false
+showImport: false
+showExport: false
+
+primaryNavigation:
+    label: 'Marcas'
+    icon: icon-star
+    order: 312
+fields:
+    url:
+        label: 'Enlace'
+        span: 'left'
+        required: true
+        type: 'text' 
+    image:
+        label: 'Imagen'
+        span: 'right'
+        required: true
+        type: 'fileupload'
+        mode: 'image'
+        useCaption: false

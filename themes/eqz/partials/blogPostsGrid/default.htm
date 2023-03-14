@@ -1,0 +1,11 @@
+{% set posts = __SELF__.posts %}
+<div class="grid grid-cols-1 gap-4 h-full lg:grid-cols-[60%_40%] lg:h-[528px]">
+    {% partial '@post' post=posts[0] first=true %}
+    <div class="grid grid-rows-1 gap-4 lg:grid-rows-2">
+        {% for post in posts %}
+            {% if loop.index0 > 0 %}
+                {% partial '@post' post=post first=false %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

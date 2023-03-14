@@ -1,0 +1,25 @@
+title = "Post"
+url = "/blog/post/:slug"
+layout = "main"
+is_hidden = 0
+
+[blogPost]
+
+[blogCategories]
+
+[blogPosts blogLastPosts]
+postsPerPage=5
+
+[viewBag]
+activeMenu = "blog"
+==
+<section id="blogPosts_page"
+    class="container mx-auto my-0 lg:my-4">
+    <div class="grid grid-cols-1 lg:grid-cols-[70%_30%] gap-4">
+        {% component 'blogPost' %}
+        <div>
+            {% component 'blogCategories' %}
+            {% component 'blogLastPosts' %}
+        </div>
+    </div>
+</section>

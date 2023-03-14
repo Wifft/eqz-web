@@ -1,0 +1,51 @@
+is_priority = 1
+
+[contenteditor]
+
+[collection rosters]
+handle = "Rosters\Roster"
+
+[collection brands]
+handle = "Brands\Brand"
+
+[collection legalTexts]
+handle = "LegalTexts\Text"
+==
+<!DOCTYPE html>
+<html lang="{{ env('APP_LOCALE') }}">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport"
+            content="width=device-width,initial-scale=1.0"/>
+        <title>{{ placeholder('pageTitle', this.page.title) ~ ' | ' ~ env('APP_NAME') }}</title>
+        <meta name="description"
+            content=""/>
+        <meta name="keywords"
+            content="eQz, {{ env('APP_NAME') }}, eQuizers eSports Club"/>
+        <meta name="og:title"
+            content="{{ placeholder('pageTitle', this.page.title) }}"/>
+        <meta name="og:description"
+            content=""/>
+        {% partial 'site/twitter-og-metas' %}
+        <meta property="author"
+            content="Wifft"/>
+        <meta property="generator"
+            content="OctoberCMS"/>
+        {% partial 'site/favicon' %}
+        <link rel="author"
+            href="{{ env('APP_URL') }}/humans.txt"
+            type="text/plain"/>
+        <link rel="canonical"
+            href="{{ this.page.id|page(false) }}"/>
+        {% partial 'site/head-styles' %}
+    </head>
+    <body class="flex flex-col min-h-screen bg-cover bg-center bg-fixed"
+        style="background-image: url('{{ 'assets/img/body_bg.png'|theme }}');">
+        {% partial 'site/navbar' %}
+        <main class="{{ this.page.baseFileName is same as('home') ? 'mx-4 lg:mx-0' : null }}">
+            {% page %}
+        </main>
+        {% partial 'site/footer' %}
+        {% partial 'site/body-scripts' %}
+    </body>
+</html>

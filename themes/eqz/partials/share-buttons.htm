@@ -1,0 +1,44 @@
+<div class="flex my-4 text-white">
+    <a class="mr-2 bg-blue-800 px-4 hover:bg-black"
+        href="https://www.facebook.com/sharer/sharer.php?u={{ page|url_encode }}"
+        target="_blank"
+        rel="external nofollow noopener noreferrer"
+        title="Compartir en Facebook">
+        <i class="fab fa-facebook"></i>
+    </a>
+    <a class="mr-2 bg-blue-600 px-4 hover:bg-black"
+        href="http://twitter.com/intent/tweet?text={{ title|url_encode }}&amp;url={{ page|url_encode }}"
+        target="_blank"
+        rel="external nofollow noopener noreferrer"
+        title="Compartir en Twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a class="mr-2 bg-orange-500 px-4 hover:bg-black"
+        href="http://reddit.com/submit?url={{ page|url_encode }}&title={{ title|url_encode }}"
+        target="_blank"
+        rel="external nofollow noopener noreferrer"
+        title="Compartir en Reddit">
+        <i class="fab fa-reddit"></i>
+    </a>
+    <a class="mr-2 bg-cyan-700 px-4 hover:bg-black"
+        href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ page|url_encode }}&amp;title={{ title|url_encode }}"
+        target="_blank"
+        rel="external nofollow noopener noreferrer"
+        title="Compartir en LinkedIn">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a class="mr-2 bg-lime-500 px-4 hover:bg-black"
+        href="https://api.whatsapp.com/send?text={{ title|url_encode }}&nbsp;{{ page|url_encode }}"
+        target="_blank"
+        rel="external nofollow noopener noreferrer"
+        title="Compartir en WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a class="bg-blue-400 px-4 hover:bg-black"
+        href="https://telegram.me/share/url?url={{ page|url_encode }}&amp;text={{ title|url_encode }}"
+        target="_blank"
+        rel="external nofollow noopener noreferrer"
+        title="Compartir en Telegram">
+        <i class="fab fa-telegram"></i>
+    </a>
+</div>

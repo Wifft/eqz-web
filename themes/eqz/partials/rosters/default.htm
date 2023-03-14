@@ -1,0 +1,16 @@
+{% for roster in rosters %}
+    <div id="{{ roster.slug }}"
+        class="my-8">
+        <picture>
+            <img class="m-auto w-96"
+                src="{{ roster.image[0].path }}"
+                alt="{{ roster.title }}"
+                title="{{ roster.title }}"/>
+        </picture>
+        <div class="slick-slider">
+            {% for player in roster.members %}
+                {% partial '@card' player=player %}
+            {% endfor %}
+        </div>
+    </div>
+{% endfor %}

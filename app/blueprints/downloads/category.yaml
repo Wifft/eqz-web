@@ -1,0 +1,22 @@
+uuid: 4afe2cb7-c386-47c6-b1b9-487aeaf04118
+handle: Downloads\Category
+type: structure
+name: 'Categorías'
+
+drafts: false
+showImport: false
+showExport: false
+
+navigation:
+    parent: Downloads\File
+    icon: icon-list
+    order: 10
+
+fields:
+    files:
+        label: 'Archivos'
+        span: 'full'
+        required: false
+        type: 'entries'
+        source: 'Downloads\File'
+        disabled: false

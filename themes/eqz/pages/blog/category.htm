@@ -1,0 +1,27 @@
+title = "Categorías"
+url = "/blog/categoria/:slug"
+layout = "main"
+is_hidden = 0
+
+[blogPosts blogPostsList]
+categoryFilter = "{{ :slug }}"
+pageParam="page"
+
+[viewBag]
+activeMenu = "blog"
+==
+use RainLab\Blog\Models\Category;
+
+function onStart() : void
+{
+    $category = Category::where('slug', $this->param('slug'))->first();
+    if (is_null($category)) {
+        abort(404);
+    }
+    $this->page->title = $category->name;
+}
+==
+<section id="blogPosts_page"
+    class="container mx-auto my-4">
+    {% component 'blogPostsList' %}
+</section>

@@ -1,0 +1,42 @@
+{% set posts = __SELF__.posts %}
+
+{% for post in posts %}
+    {% partial '@post' post=post %}
+{% else %}
+    <article class="p-6 mx-auto space-y-6 lg:space-y-12">
+        <p class="text-center">{{ __SELF__.noPostsMessage }}</p>
+    </article>
+{% endfor %}
+
+{% if posts.lastPage > 1 %}
+    <div class="flex items-center justify-center mb-8">
+        <ul class="flex flex-wrap items-center text-xl text-white uppercase">
+            {% if posts.currentPage > 1 %}
+                <li class="bg-primary p-4 mr-4">
+                    <a class="hover:underline"
+                        href="{{ this.page.baseFileName|page({(__SELF__.pageParam): (posts.currentPage-1)}) }}">
+                        &larr;
+                    </a>
+                </li>
+            {% endif %}
+
+            {% for page in 1..posts.lastPage %}
+                <li class="{{ posts.currentPage == page ? 'bg-secondary--translucent' : 'bg-primary--translucent' }} p-4 mr-4">
+                    <a class="hover:underline"
+                        href="{{ this.page.baseFileName|page({(__SELF__.pageParam): page}) }}">
+                        {{ page }}
+                    </a>
+                </li>
+            {% endfor %}
+
+            {% if posts.lastPage > posts.currentPage %}
+                <li class="bg-primary p-4 mr-4">
+                    <a class="hover:underline"
+                        href="{{ this.page.baseFileName|page({(__SELF__.pageParam): (posts.currentPage+1)}) }}">
+                        &rarr;
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+{% endif %}

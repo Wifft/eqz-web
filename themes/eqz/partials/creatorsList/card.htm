@@ -1,0 +1,32 @@
+<article class="mx-4 mt-10">
+    <div class="relative overflow-hidden group">
+        <a href="{{ 'creators/profile'|page({'slug': creator.slug}) }}">
+            <picture>
+                <img class="object-cover h-auto w-full lg:w-96 lg:h-96 transition-all duration-300 ease-linear group-hover:scale-110"
+                    src="{{ creator.image[0].getThumb(368,368,{'mode':'crop','quality':65,'extension':'webp'}) }}"
+                    alt="{{ creator.nickname }}"
+                    title="{{ creator.nickname }}"/>
+            </picture>
+        </a>
+    </div>
+    <div class="relative mt-4 text-white text-center lg:text-start">
+        <h3 class="text-3xl font-bold home-text-shadow break-all">
+            <a class="hover:underline"
+                href="{{ 'creators/profile'|page({'slug': creator.slug}) }}">
+                {{ creator.nickname }}
+            </a>
+        </h3>
+        <p class="text-2xl home-text-shadow">{{ creator.title }}</p>
+        <div class="flex text-gray-200 text-2xl justify-center lg:justify-start">
+            {% for social in creator.socials %}
+                <a class="mr-2 home-text-shadow transition-all duration-200 ease-linear hover:text-secondary"
+                    href="{{ social.url }}"
+                    target="_blank"
+                    rel="external nofollow noopener noreferrer"
+                    title="{{ social.name }}">
+                    <i class="fab fa-{{ social.name|slug }}"></i>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</article>

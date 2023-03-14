@@ -1,0 +1,37 @@
+{% set klozzEasterEgg = [null, 'Klozz', 'es', 'un', 'ma', 'ri', 'con'] %}
+<article class="relative mt-10">
+    <img class="hidden absolute z-10 top-[-33px] left-[-40px] lg:inline"
+        src="{{ ('assets/img/stars/eqz-star-' ~ idx ~ '.png')|theme }}"
+        alt="star-{{ idx }}"
+        title="{{ klozzEasterEgg[idx] }}"/>
+    <div class="relative overflow-hidden rounded-t-lg group">
+        <a href="{{ 'creators/profile'|page({'slug': creator.slug}) }}">
+            <picture>
+                <img class="object-cover h-[auto] lg:h-96 w-full transition-all duration-300 ease-linear grayscale group-hover:filter-none group-hover:scale-110"
+                    src="{{ creator.image[0].getThumb('auto','auto',{'mode':'auto','quality':65,'extension':'webp'}) }}"
+                    alt="{{ creator.nickname }}"
+                    title="{{ creator.nickname }}"/>
+            </picture>
+        </a>
+    </div>
+    <div class="relative mt-4 text-white text-center lg:text-left">
+        <h3 class="text-3xl font-bold home-text-shadow break-all">
+            <a class="hover:underline"
+                href="{{ 'creators/profile'|page({'slug': creator.slug}) }}">
+                {{ creator.nickname }}
+            </a>
+        </h3>
+        <p class="text-2xl home-text-shadow">{{ creator.title }}</p>
+        <div class="flex justify-center text-gray-200 text-2xl lg:justify-start">
+            {% for social in creator.socials %}
+                <a class="mr-2 home-text-shadow transition-all duration-200 ease-linear hover:text-secondary"
+                    href="{{ social.url }}"
+                    target="_blank"
+                    rel="external nofollow noopener noreferrer"
+                    title="{{ social.name }}">
+                    <i class="fab fa-{{ social.name|slug }}"></i>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</article>

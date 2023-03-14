@@ -1,0 +1,33 @@
+uuid: aa2f61e9-9e9b-4133-b21e-3278d36cce7f
+handle: Rosters\Roster
+type: structure
+name: 'Rosters'
+
+drafts: false
+showImport: false
+showExport: false
+
+primaryNavigation:
+    label: 'Rosters'
+    icon: icon-gamepad
+    order: 310
+
+navigation:
+    parent: 'Rosters\Roster'
+    icon: icon-gamepad
+    order: 1
+
+fields:
+    members:
+        label: 'Members'
+        span: 'full'
+        required: false
+        type: 'entries'
+        source: 'Rosters\Member'
+    image:
+        label: 'Imagen'
+        span: 'left'
+        required: true
+        type: 'fileupload'
+        mode: 'image'
+        useCaption: false

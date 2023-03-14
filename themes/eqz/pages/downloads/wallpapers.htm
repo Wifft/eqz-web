@@ -1,0 +1,18 @@
+title = "Fondos"
+url = "/descargas/fondos"
+layout = "main"
+is_hidden = 0
+
+[collection downloadCategories]
+handle = "Downloads\Category"
+
+[viewBag]
+activeMenu = "downloads"
+activeSubmenu = "wallpapers"
+==
+<section id="wallpapers_page"
+    class="bg-primary--translucent h-full">
+    <div class="container mx-auto py-8 text-white text-center">
+        {% component 'downloadCategories' %}
+    </div>
+</section>

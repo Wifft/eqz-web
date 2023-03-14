@@ -1,0 +1,51 @@
+uuid: 18adffdc-d284-4d2b-b14d-e9e745383321
+handle: Rosters\Member
+type: entry
+name: 'Jugadores'
+
+drafts: false
+showImport: false
+showExport: false
+
+navigation:
+    parent: Rosters\Roster
+    icon: icon-users
+    order: 2
+
+validation:
+    rules:
+        nickname: 'string|required|max:255'
+
+fields:
+    role:
+        label: 'Rol'
+        span: 'left'
+        required: true
+        type: 'text'
+        size: 'small'
+        column: false
+    image:
+        label: 'Imagen'
+        span: 'right'
+        required: true
+        type: 'fileupload'
+        mode: 'image'
+        useCaption: false
+    socials:
+        label: 'Redes sociales'
+        span: 'left'
+        required: false
+        type: 'repeater'
+        titleFrom: 'Redes sociales'
+        form:
+            fields:
+                name:
+                    label: 'Nombre'
+                    span: 'full'
+                    required: true
+                    type: 'text'
+                url:
+                    label: 'URL'
+                    span: 'full'
+                    required: true
+                    type: 'text'

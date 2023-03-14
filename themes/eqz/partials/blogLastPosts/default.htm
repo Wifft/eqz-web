@@ -1,0 +1,25 @@
+<div class="bg-secondary--translucent px-8 py-4 mt-4 shadow-xl">
+    <h2 class="mb-4 text-white text-2xl font-bold break-all">
+        Últimas notícias
+    </h2>
+    {% if __SELF__.posts|length > 0 %}
+        <ul class="text-white">
+            {% for post in posts %}
+                <li class="py-1">
+                    <a class="text-lg hover:underline"
+                        href="{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                    <br/>
+                    <span class="text-gray-600">
+                        {{ post.published_at|date('d/m/Y') }}
+                    </span>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="text-white">
+            No se han encontrado categorías.
+        </p>
+    {% endif %}
+</div>
