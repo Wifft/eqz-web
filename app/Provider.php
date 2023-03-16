@@ -1,29 +1,38 @@
-<?php namespace App;
+<?php
+namespace App;
 
 use System\Classes\AppBase;
 
-/**
- * Provider is an application level plugin, all registration methods are supported.
- */
-class Provider extends AppBase
+use App\Components\YouTubeVideosList;
+
+use App\Console\ImportYouTubeVideos;
+use App\Jobs\YouTubeVideosImport;
+
+final class Provider extends AppBase
 {
     /**
-     * register method, called when the app is first registered.
-     *
-     * @return void
+     * @inheritDoc
      */
-    public function register() : void
+    public function registerComponents() : array
     {
-        parent::register();
+        return [
+            YouTubeVideosList::class => 'youtubeVideosList'
+        ];
     }
 
     /**
-     * boot method, called right before the request route.
-     *
-     * @return void
+     * @inheritDoc
      */
-    public function boot() : void
+    public function register() : void
     {
-        parent::boot();
+        $this->registerConsoleCommand('eqz:import_youtube_videos', ImportYouTubeVideos::class);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function registerSchedule($schedule) : void
+    {
+        $schedule->job(YouTubeVideosImport::class)->everySixHours();
     }
 }

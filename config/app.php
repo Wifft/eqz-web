@@ -1,5 +1,7 @@
 <?php
 
+use Madcoda\Youtube\YoutubeServiceProviderLaravel5;
+
 return [
 
     /*
@@ -116,7 +118,8 @@ return [
         System\ServiceProvider::class,
 
         // Package Service Providers...
-        // Illuminate\Html\HtmlServiceProvider::class, // Example
+        // Illuminate\Html\HtmlServiceProvider::class, // Example,
+        YoutubeServiceProviderLaravel5::class
 
     ]),
 
