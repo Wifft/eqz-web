@@ -12,16 +12,16 @@ handle = "Brands\Brand"
 handle = "LegalTexts\Text"
 ==
 <!DOCTYPE html>
-<html lang="{{ env('APP_LOCALE') }}">
+<html lang="es">
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport"
             content="width=device-width,initial-scale=1.0"/>
-        <title>{{ placeholder('pageTitle', this.page.title) ~ ' | ' ~ env('APP_NAME') }}</title>
+        <title>{{ placeholder('pageTitle', this.page.title) ~ ' | eQuizersEC' }}</title>
         <meta name="description"
             content=""/>
         <meta name="keywords"
-            content="eQz, {{ env('APP_NAME') }}, eQuizers eSports Club"/>
+            content="eQz, eQuizersEC, eQuizers eSports Club"/>
         <meta name="og:title"
             content="{{ placeholder('pageTitle', this.page.title) }}"/>
         <meta name="og:description"
@@ -33,7 +33,7 @@ handle = "LegalTexts\Text"
             content="OctoberCMS"/>
         {% partial 'site/favicon' %}
         <link rel="author"
-            href="{{ env('APP_URL') }}/humans.txt"
+            href="https://www.equizers.com/humans.txt"
             type="text/plain"/>
         <link rel="canonical"
             href="{{ this.page.id|page(false) }}"/>
