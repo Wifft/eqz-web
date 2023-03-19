@@ -3,13 +3,13 @@
         <a href="{{ 'blog/post'|page({'slug': post.slug}) }}">
             <picture>
                 <img class="object-cover h-auto lg:h-96 w-full transition-all duration-300 ease-linear group-hover:scale-110"
-                    src="{{ post.featured_images[0].getThumb('auto','auto',{'mode':'auto','quality':65,'extension':'webp'}) }}"
+                    src="{{ post.featured_images[0].getThumb('auto', 'auto', {'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
                     alt="{{ post.title }}"
                     title="{{ post.title }}"/>
             </picture>
         </a>
     </div>
-    <div class="relative mt-4 text-white text-center lg:text-start">
+    <div class="relative mt-4 text-white text-middle lg:text-start">
         <span class="text-gray-300 text-sm">
             {% for category in post.categories %}
                 <a class="hover:underline"

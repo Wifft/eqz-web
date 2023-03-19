@@ -2,7 +2,6 @@
 {% if post is empty %}
     {% do abort(404) %}
 {% endif %}
-{% put pageTitle = post.title %}
 <article class="bg-secondary--translucent p-4 shadow-xl">
     <h1 class="text-primary text-4xl uppercase font-bold break-all">
         {{ post.title }}
@@ -20,12 +19,12 @@
     </p>
     {% if post.featured_images|length %}
         <picture>
-            <img src="{{ post.featured_images[0].getThumb('auto','auto',{'mode':'auto','quality':65,'extension':'webp'}) }}"
+            <img src="{{ post.featured_images[0].getThumb('auto', 'auto', {'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
                 alt="{{ post.title }}"
                 title="{{ post.title }}"/>
         </picture>
     {% endif %}
-    {% partial 'share-buttons' title=post.title page=''|page %}
+    {% partial 'share-buttons' title = post.title page = ''|page only %}
     <div class="text-primary text-justify">
         {{ post.content_html|raw }}
     </div>

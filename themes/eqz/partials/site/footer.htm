@@ -8,7 +8,7 @@
                         target="_blank"
                         rel="external noopener noreferrer">
                         <img class="h-16 m-auto md:m-0"
-                            src="{{ brand.image[0].getThumb(400, 400, {'mode':'auto','quality':65,'extension':'webp'}) }}"
+                            src="{{ brand.image[0].getThumb(400, 400, {'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
                             alt="{{ brand.title }}"
                             title="{{ brand.title }}"/>
                     </a>
@@ -23,12 +23,12 @@
             href="{{ 'home'|page(false) }}">
             <picture>
                 <img class="h-8 mr-3"
-                    src="{{ 'assets/img/eqz_logo.png'|theme }}"
-                    alt="eQuizersEC"
-                    title="eQuizersEC"/>
+                    src="{{ 'assets/img/eqz_logo.webp'|theme }}"
+                    alt="{{ env('APP_NAME') }}"
+                    title="{{ env('APP_NAME') }}"/>
             </picture>
             <span class="self-center text-2xl text-white font-semibold whitespace-nowrap">
-                eQuizersEC
+                {{ env('APP_NAME') }}
             </span>
         </a>
     </div>

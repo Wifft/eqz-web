@@ -4,7 +4,7 @@
     <div class="grid grid-rows-1 gap-4 lg:grid-rows-2">
         {% for post in posts %}
             {% if loop.index0 > 0 %}
-                {% partial '@post' post=post first=false %}
+                {% partial '@post' post=post first = false only %}
             {% endif %}
         {% endfor %}
     </div>

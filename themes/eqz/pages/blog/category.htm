@@ -19,6 +19,7 @@ function onStart() : void
         abort(404);
     }
     $this->page->title = $category->name;
+    $this->page->meta_description = $category->description;
 }
 ==
 <section id="blogPosts_page"

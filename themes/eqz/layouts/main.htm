@@ -1,3 +1,4 @@
+description = "Main layout"
 is_priority = 1
 
 [contenteditor]
@@ -11,41 +12,58 @@ handle = "Brands\Brand"
 [collection legalTexts]
 handle = "LegalTexts\Text"
 ==
+use Cms\Models\MaintenanceSetting;
+
+function onStart() {
+    $this['maintenanceMode'] = MaintenanceSetting::instance()->is_enabled;
+}
+==
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ env('APP_LOCALE') }}">
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport"
             content="width=device-width,initial-scale=1.0"/>
-        <title>{{ placeholder('pageTitle', this.page.title) ~ ' | eQuizersEC' }}</title>
-        <meta name="description"
-            content=""/>
-        <meta name="keywords"
-            content="eQz, eQuizersEC, eQuizers eSports Club"/>
-        <meta name="og:title"
-            content="{{ placeholder('pageTitle', this.page.title) }}"/>
-        <meta name="og:description"
-            content=""/>
-        {% partial 'site/twitter-og-metas' %}
-        <meta property="author"
-            content="Wifft"/>
-        <meta property="generator"
-            content="OctoberCMS"/>
-        {% partial 'site/favicon' %}
-        <link rel="author"
-            href="https://www.equizers.com/humans.txt"
-            type="text/plain"/>
-        <link rel="canonical"
-            href="{{ this.page.id|page(false) }}"/>
-        {% partial 'site/head-styles' %}
+        <title>{{ this.page.title ~ ' | ' ~ env('APP_NAME') }}</title>
+        {% if not maintenanceMode %}
+            <meta name="description"
+                content="{{ this.page.meta_description }}"/>
+            <meta name="keywords"
+                content="eQz, {{ env('APP_NAME') }}, eQuizers eSports Club"/>
+            <meta name="og:title"
+                content="{{ this.page.title  ~ ' | ' ~ env('APP_NAME') }}"/>
+            <meta name="og:description"
+                content="{{ this.page.meta_description }}"/>
+            {% partial 'site/twitter-og-metas' only %}
+            <meta property="author"
+                content="Wifft"/>
+            <meta property="generator"
+                content="OctoberCMS"/>
+            {% partial 'site/favicon' only %}
+            <link rel="author"
+                href="{{ env('APP_URL') }}/humans.txt"
+                type="text/plain"/>
+            <link rel="canonical"
+                href="{{ this.page.id|page(false) }}"/>
+        {% endif %}
+        {% partial 'site/head-styles' only %}
     </head>
     <body class="flex flex-col min-h-screen bg-cover bg-center bg-fixed"
-        style="background-image: url('{{ 'assets/img/body_bg.png'|theme }}');">
-        {% partial 'site/navbar' %}
-        <main class="{{ this.page.baseFileName is same as('home') ? 'mx-4 lg:mx-0' : null }}">
+        style="background-image: url('{{ 'assets/img/body_bg.webp'|theme }}');">
+        {% if not maintenanceMode %}
+            {% flash %}
+                <div class="alert alert-{{ type }}">
+                    {{ message }}
+                </div>
+            {% endflash %}
+            {% partial 'site/navbar' only %}
+        {% endif %}
+        <main class="{{ this.page.baseFileName is same as('home') and not maintenanceMode ? 'mx-4 lg:mx-0' : null }}">
             {% page %}
         </main>
-        {% partial 'site/footer' %}
-        {% partial 'site/body-scripts' %}
+        {% if not maintenanceMode %}
+            {% partial 'site/footer' only %}
+        {% endif %}
+        {% partial 'site/body-scripts' only %}
     </body>
 </html>

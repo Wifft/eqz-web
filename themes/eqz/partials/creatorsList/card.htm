@@ -3,13 +3,13 @@
         <a href="{{ 'creators/profile'|page({'slug': creator.slug}) }}">
             <picture>
                 <img class="object-cover h-auto w-full lg:w-96 lg:h-96 transition-all duration-300 ease-linear group-hover:scale-110"
-                    src="{{ creator.image[0].getThumb(368,368,{'mode':'crop','quality':65,'extension':'webp'}) }}"
+                    src="{{ creator.image[0].getThumb(368, 368, {'mode':'crop', 'quality':65, 'extension':'webp'}) }}"
                     alt="{{ creator.nickname }}"
                     title="{{ creator.nickname }}"/>
             </picture>
         </a>
     </div>
-    <div class="relative mt-4 text-white text-center lg:text-start">
+    <div class="relative mt-4 text-white text-middle lg:text-start">
         <h3 class="text-3xl font-bold home-text-shadow break-all">
             <a class="hover:underline"
                 href="{{ 'creators/profile'|page({'slug': creator.slug}) }}">

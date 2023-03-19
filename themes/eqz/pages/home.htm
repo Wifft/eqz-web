@@ -1,17 +1,28 @@
-title = "Bienvenido"
 url = "/"
 layout = "main"
+title = "Bienvenido"
 is_hidden = 0
+meta_description = "Bienvenido a la página de web de eQuizersEC, un club de eSports fundado en 2019 que se centra en ofrecer el mejor contenido y los mejores resultados a la comunidad gaming del ámbito Español."
 
 [blogPosts blogPostsGrid]
+pageNumber = "{{ :page }}"
 postsPerPage = 3
+noPostsMessage = "No se encontraron publicaciones."
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
 
 [collection highlightedCreators]
 handle = "Creators\Creator"
 
 [blogPosts blogCategoryGrid]
+pageNumber = "{{ :page }}"
 categoryFilter = "valorant"
 postsPerPage = 3
+noPostsMessage = "No se encontraron publicaciones."
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
 
 [youtubeVideosList]
 ==

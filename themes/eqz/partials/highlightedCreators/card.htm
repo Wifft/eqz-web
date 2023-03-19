@@ -1,20 +1,20 @@
 {% set klozzEasterEgg = [null, 'Klozz', 'es', 'un', 'ma', 'ri', 'con'] %}
 <article class="relative mt-10">
     <img class="hidden absolute z-10 top-[-33px] left-[-40px] lg:inline"
-        src="{{ ('assets/img/stars/eqz-star-' ~ idx ~ '.png')|theme }}"
+        src="{{ ('assets/img/stars/eqz-star-' ~ idx ~ '.webp')|theme }}"
         alt="star-{{ idx }}"
         title="{{ klozzEasterEgg[idx] }}"/>
     <div class="relative overflow-hidden rounded-t-lg group">
         <a href="{{ 'creators/profile'|page({'slug': creator.slug}) }}">
             <picture>
                 <img class="object-cover h-[auto] lg:h-96 w-full transition-all duration-300 ease-linear grayscale group-hover:filter-none group-hover:scale-110"
-                    src="{{ creator.image[0].getThumb('auto','auto',{'mode':'auto','quality':65,'extension':'webp'}) }}"
+                    src="{{ creator.image[0].getThumb('auto', 'auto', {'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
                     alt="{{ creator.nickname }}"
                     title="{{ creator.nickname }}"/>
             </picture>
         </a>
     </div>
-    <div class="relative mt-4 text-white text-center lg:text-left">
+    <div class="relative mt-4 text-white text-middle lg:text-start">
         <h3 class="text-3xl font-bold home-text-shadow break-all">
             <a class="hover:underline"
                 href="{{ 'creators/profile'|page({'slug': creator.slug}) }}">

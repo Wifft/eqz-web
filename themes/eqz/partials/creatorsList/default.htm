@@ -1,5 +1,5 @@
 <div class="grid grid-cols-1 lg:grid-cols-4">
     {% for creator in creatorsList %}
-        {% partial '@card' creator=creator  %}
+        {% partial '@card' creator = creator only %}
     {% endfor %}
 </div>

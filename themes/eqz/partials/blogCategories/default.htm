@@ -4,7 +4,7 @@
     </h2>
     {% if __SELF__.categories|length > 0 %}
         <ul class="text-white text-lg">
-            {% partial '@items' categories = __SELF__.categories %}
+            {% partial '@items' categories = __SELF__.categories only %}
         </ul>
     {% else %}
         <p class="text-white">

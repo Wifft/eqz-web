@@ -9,8 +9,14 @@
         </picture>
         <div class="slick-slider">
             {% for player in roster.members %}
-                {% partial '@card' player=player %}
+                {% partial '@card' player = player only %}
             {% endfor %}
+            {# Rellenamos huecos para evitar que la cosa se vea rara cuando hay menos de 6 #}
+            {% if roster.members|length < 6 %}
+                {% for i in (roster.members|length + 1)..5 %}
+                    {% partial '@card' player = null only %}
+                {% endfor %}
+            {% endif %}
         </div>
     </div>
 {% endfor %}

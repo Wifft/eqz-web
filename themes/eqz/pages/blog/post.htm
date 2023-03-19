@@ -13,6 +13,12 @@ postsPerPage=5
 [viewBag]
 activeMenu = "blog"
 ==
+function onEnd() : void
+{
+    $this->page->title = $this->page->components['blogPost']->post->title;
+    $this->page->meta_description = strip_tags(html_entity_decode($this->page->components['blogPost']->post->summary));
+}
+==
 <section id="blogPosts_page"
     class="container mx-auto my-0 lg:my-4">
     <div class="grid grid-cols-1 lg:grid-cols-[70%_30%] gap-4">

@@ -1,10 +1,16 @@
-title = "Blog"
 url = "/blog/pagina/:page"
 layout = "main"
+title = "Blog"
 is_hidden = 0
+meta_description = "Desde nuestro blog podrás mantenerte al tanto de las últimas notícias."
 
 [blogPosts blogPostsList]
-pageParam="page"
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No se encontraron publicaciones."
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
 
 [viewBag]
 activeMenu = "blog"

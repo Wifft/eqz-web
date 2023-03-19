@@ -11,6 +11,12 @@ entryColumn = "slug"
 [viewBag]
 activeMenu = "creators"
 ==
+function onEnd() : void
+{
+    $this->page->title = $this->page->components['creatorsProfile']->getPrimaryRecord()->nickname;
+    $this->page->meta_description = str_limit(strip_tags(html_entity_decode($this->page->components['creatorsProfile']->getPrimaryRecord()->description)), 64, '...');
+}
+==
 <section id="creatorsProfile_page"
     class="bg-secondary--translucent">
     {% component 'creatorsProfile' %}

@@ -1,7 +1,7 @@
 <div class="m-[39px]">
     <picture>
         <img class="lg:w-auto w-full lg:h-64 h-auto"
-            src="{{ file.thumb[0].getThumb(1280,720,{'mode':'crop','quality':65,'extension':'webp'}) }}"
+            src="{{ file.thumb[0].getThumb(1280, 720, {'mode':'crop', 'quality':65, 'extension':'webp'}) }}"
             alt="{{ file.title }}"
             title="{{ file.title }}"/>
     </picture>
@@ -9,7 +9,7 @@
         <p class="py-4">
             <a class="bg-secondary text-white p-2 uppercase hover:bg-white hover:text-secondary transition-all duration-300"
                 href="{{ file.image_pc[0].path }}"
-                traget="_blank">
+                target="_blank">
                 <i class="fas fa-download"></i>
                 Descargar para PC
             </a>
@@ -17,7 +17,7 @@
         <p class="py-4">
             <a class="bg-secondary text-white p-2 uppercase hover:bg-white hover:text-secondary transition-all duration-300"
                 href="{{ file.image_mobile[0].path }}"
-                traget="_blank">
+                target="_blank">
                 <i class="fas fa-download"></i>
                 Descargar para móvil
             </a>

@@ -6,7 +6,7 @@
         </a>
         {% if category.children|length > 0 %}
             <ul>
-                {% partial '@items' categories=category.children %}
+                {% partial '@items' categories = category.children only %}
             </ul>
         {% endif %}
     </li>
