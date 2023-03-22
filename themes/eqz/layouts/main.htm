@@ -14,8 +14,11 @@ handle = "LegalTexts\Text"
 ==
 use Cms\Models\MaintenanceSetting;
 
-function onStart() {
-    $this['maintenanceMode'] = MaintenanceSetting::instance()->is_enabled;
+use Backend\Facades\BackendAuth;
+
+function onStart() : void
+{
+    $this['maintenanceMode'] = MaintenanceSetting::instance()->is_enabled && is_null(BackendAuth::getUser());
 }
 ==
 <!DOCTYPE html>
