@@ -1,1 +1,14 @@
-<!-- ToDo: Add layout here -->
+{% set videos = __SELF__.videos %}
+{% if videos|length > 0 %}
+    <div class="bg-white rounded-lg font-bold mb-16 p-8">
+        <h2 class="text-primary text-2xl uppercase">
+            <i class="fas fa-play"></i>
+            Últimos vídeos
+        </h2>
+        <div class="grid grid-cols-1 gap-x-10 lg:grid-cols-4">
+            {% for video in videos %}
+                {% partial '@video' video = video only %}
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}

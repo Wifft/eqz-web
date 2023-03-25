@@ -672,6 +672,12 @@ select {
 .left-\[-40px\] {
   left: -40px;
 }
+.left-\[258px\] {
+  left: 258px;
+}
+.top-\[-18px\] {
+  top: -18px;
+}
 .top-\[-33px\] {
   top: -33px;
 }
@@ -712,6 +718,9 @@ select {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.mb-16 {
+  margin-bottom: 4rem;
+}
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -738,6 +747,9 @@ select {
 }
 .mt-4 {
   margin-top: 1rem;
+}
+.mt-8 {
+  margin-top: 2rem;
 }
 .mt-auto {
   margin-top: auto;
@@ -791,6 +803,9 @@ select {
 .h-\[436px\] {
   height: 436px;
 }
+.h-\[570px\] {
+  height: 570px;
+}
 .h-\[auto\] {
   height: auto;
 }
@@ -815,6 +830,9 @@ select {
 .w-96 {
   width: 24rem;
 }
+.w-\[94px\] {
+  width: 94px;
+}
 .w-auto {
   width: auto;
 }
@@ -835,6 +853,9 @@ select {
 }
 .grid-rows-1 {
   grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+.grid-rows-\[120px_auto\] {
+  grid-template-rows: 120px auto;
 }
 .flex-row-reverse {
   -webkit-box-orient: horizontal;
@@ -931,6 +952,10 @@ select {
 .rounded-xl {
   border-radius: 0.75rem;
 }
+.rounded-b-lg {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
 .rounded-t-lg {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -1020,6 +1045,10 @@ select {
 .bg-secondary--translucent {
   background-color: #44c4fdd9;
 }
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
 .bg-cover {
   background-size: cover;
 }
@@ -1041,6 +1070,9 @@ select {
 }
 .p-6 {
   padding: 1.5rem;
+}
+.p-8 {
+  padding: 2rem;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -1149,6 +1181,10 @@ select {
 .uppercase {
   text-transform: uppercase;
 }
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
@@ -1218,10 +1254,6 @@ select {
   -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
 }
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
 /*!
  * Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -11714,6 +11746,29 @@ readers do not read off random characters that represent icons */
   content: "\f3f6";
 }
 
+.navbar-link {
+  display: block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 1rem;
+  text-transform: uppercase;
+}
+
+.navbar-link:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .navbar-link {
+    padding: 0px;
+  }
+}
+.navbar-link:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 @font-face {
   font-family: "Pilat Extended";
   src: url("/themes/eqz/assets/fonts/pilat_extended.ttf") format("truetype");

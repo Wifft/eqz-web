@@ -27,7 +27,7 @@
             class="hidden w-full lg:block lg:w-auto">
             <ul class="flex flex-col p-4 mt-4 border border-gray-700 rounded-lg bg-gray-800 lg:flex-row lg:space-x-8 lg:mt-0 lg:text-sm lg:font-medium lg:border-0 lg:bg-transparent uppercase">
                 <li>
-                    <a class="block py-2 pl-3 pr-4 {{ viewBag.activeMenu is same as('blog') ? 'text-white' : 'text-gray-400' }} rounded lg:bg-transparent lg:p-0 hover:text-white"
+                    <a class="navbar-link {{ viewBag.activeMenu is same as('blog') ? 'text-white' : 'text-gray-400' }}"
                         href="{{ 'blog/posts'|page({'page':1}) }}"
                         aria-current="page">
                         Noticias
@@ -65,19 +65,19 @@
                     </div>
                 </li>
                 <li>
-                    <a class="block py-2 pl-3 pr-4 {{ viewBag.activeMenu is same as('creators') ? 'text-white' : 'text-gray-400' }} lg:p-0 hover:text-white uppercase"
+                    <a class="navbar-link {{ viewBag.activeMenu is same as('creators') ? 'text-white' : 'text-gray-400' }}"
                         href="{{ 'creators/list'|page(false) }}">
                         Creadores
                     </a>
                 </li>
                 <li>
-                    <a class="block py-2 pl-3 pr-4 {{ viewBag.activeMenu is same as('club') ? 'text-white' : 'text-gray-400' }} lg:p-0 hover:text-white uppercase"
+                    <a class="navbar-link {{ viewBag.activeMenu is same as('club') ? 'text-white' : 'text-gray-400' }}"
                         href="{{ 'about'|page(false) }}">
                         El Club
                     </a>
                 </li>
                 <li>
-                    <a class="block py-2 pl-3 pr-4 text-gray-400 rounded lg:bg-transparent lg:p-0 hover:text-white"
+                    <a class="navbar-link text-gray-400"
                         href="https://www.youtube.com/watch?v=octAO_3R0UE&list=PL-QbgQD1pecACh1z6EtjtWILv9tMfce0S"
                         target="_blank"
                         rel="external noopener noreferrer"

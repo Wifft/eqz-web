@@ -3,8 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "components/components";
 @import "vendors/vendor";
+
+@import "components/components";
 
 @font-face {
     font-family: 'Pilat Extended';

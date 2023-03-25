@@ -1,0 +1,27 @@
+<article class="relative mt-8">
+    <a class="bg-secondary text-primary p-2 uppercase font-bold rounded-xl shadow-xl transition-all duration-300 hover:bg-primary hover:text-secondary absolute left-[258px] top-[-18px] w-[94px] text-center"
+        href="https://youtu.be/{{ video.video_id }}"
+        target="_blank"
+        rel="external noopener noreferrer">
+        Ver +
+    </a>
+    <div class="block">
+        <a href="https://youtu.be/{{ video.video_id }}"
+            target="_blank"
+            rel="external noopener noreferrer">
+            <picture>
+                <img class="w-full object-cover"
+                    src="{{ video.video_thumb_url }}"/>
+            </picture>
+        </a>
+    </div>
+    <div class="bg-white text-black grid grid-rows-[120px_auto] absolute p-4 rounded-b-lg">
+        <a class="block"
+            href="https://youtu.be/{{ video.video_id }}"
+            target="_blank"
+            rel="external noopener noreferrer">
+            <h3 class="text-lg text-middle hover:underline">{{ video.title }}</h3>
+        </a>
+        <span class="text-xs">{{ video.upload_date|date('d/m/Y') }}</span>
+    </div>
+</article>

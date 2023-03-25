@@ -1,0 +1,18 @@
+.navbar {
+    $this: &;
+    &-link {
+        @apply block py-2 pl-3 pr-4 lg:p-0 hover:text-white uppercase lg:p-0;
+
+        &:hover {
+            @apply text-white;
+        }
+    }
+    &-dropdown {
+        &-btn {
+
+        }
+        &-content {
+
+        }
+    }
+}
