@@ -3,36 +3,33 @@
 {% for post in posts %}
     {% partial '@post' post = post only %}
 {% else %}
-    <article class="p-6 mx-auto space-y-6 lg:space-y-12">
+    <article class="c-blog-posts-list-post">
         <p class="text-center">{{ __SELF__.noPostsMessage }}</p>
     </article>
 {% endfor %}
 
 {% if posts.lastPage > 1 %}
-    <div class="flex items-center justify-center mb-8">
-        <ul class="flex flex-wrap items-center text-xl text-white uppercase">
+    <div class="c-blog-posts-list-pagination">
+        <ul class="c-blog-posts-list-pagination__list">
             {% if posts.currentPage > 1 %}
-                <li class="bg-primary p-4 mr-4">
-                    <a class="hover:underline"
-                        href="{{ this.page.baseFileName|page({(__SELF__.pageParam): (posts.currentPage-1)}) }}">
+                <li class="c-blog-posts-list-pagination__list--btn">
+                    <a href="{{ this.page.baseFileName|page({(__SELF__.pageParam): (posts.currentPage-1)}) }}">
                         &larr;
                     </a>
                 </li>
             {% endif %}
 
             {% for page in 1..posts.lastPage %}
-                <li class="{{ posts.currentPage == page ? 'bg-secondary--translucent' : 'bg-primary--translucent' }} p-4 mr-4">
-                    <a class="hover:underline"
-                        href="{{ this.page.baseFileName|page({(__SELF__.pageParam): page}) }}">
+                <li class="c-blog-posts-list-pagination__list--btn {{ posts.currentPage == page ? 'bg-secondary--translucent' : 'bg-primary--translucent' }}">
+                    <a href="{{ this.page.baseFileName|page({(__SELF__.pageParam): page}) }}">
                         {{ page }}
                     </a>
                 </li>
             {% endfor %}
 
             {% if posts.lastPage > posts.currentPage %}
-                <li class="bg-primary p-4 mr-4">
-                    <a class="hover:underline"
-                        href="{{ this.page.baseFileName|page({(__SELF__.pageParam): (posts.currentPage+1)}) }}">
+                <li class="c-blog-posts-list-pagination__list--btn">
+                    <a href="{{ this.page.baseFileName|page({(__SELF__.pageParam): (posts.currentPage+1)}) }}">
                         &rarr;
                     </a>
                 </li>

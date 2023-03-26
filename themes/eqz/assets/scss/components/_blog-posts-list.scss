@@ -1,0 +1,112 @@
+.c-blog-posts-list {
+    @apply container
+        mx-auto
+        my-4;
+
+    &-post {
+        @apply p-6
+            mx-auto
+            space-y-6;
+
+        @screen lg {
+            @apply space-y-12;
+        }
+
+        &__container {
+            background-color: theme('colors.secondary--translucent');
+
+            @apply block
+                max-w-sm
+                gap-3
+                mx-auto
+                shadow-xl;
+
+            @screen lg {
+                @apply max-w-full
+                    grid
+                    grid-cols-12;
+            }
+        }
+
+        &__image {
+            @screen lg {
+                @apply col-span-4;
+            }
+
+            img {
+                @apply object-cover
+                    w-full
+                    h-64
+                    bg-gray-500
+                    transition-all
+                    duration-300
+                    ease-linear;
+
+                @screen lg {
+                    @apply h-96;
+                }
+            }
+
+            &:hover {
+                img {
+                    @apply scale-110;
+                }
+            }
+        }
+
+        &__info {
+            @apply p-6
+                space-y-2;
+
+            @screen lg {
+                @apply col-span-5;
+            }
+
+            &--categories,
+            &--title {
+                color: theme('colors.primary');
+
+                @include a-underline;
+            }
+
+            &--categories {
+                @apply text-xs;
+            }
+
+            &--title {
+                @apply text-2xl
+                    font-bold;
+
+                @screen lg {
+                    @apply text-4xl;
+                }
+            }
+        }
+    }
+
+    &-pagination {
+        @apply flex
+            items-center
+            justify-center
+            mb-8;
+
+        &__list {
+            @apply flex
+                flex-wrap
+                items-center text-xl
+                text-white
+                uppercase;
+
+            li {
+                @include a-underline;
+            }
+
+            &--btn {
+                background-color: theme('colors.primary--translucent');
+
+                @apply p-4
+                    mr-4;
+            }
+        }
+    }
+}

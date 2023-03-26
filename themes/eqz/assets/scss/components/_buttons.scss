@@ -1,4 +1,20 @@
 .c-btn {
+    &--v2 {
+        background-color: theme('colors.primary');
+
+        @apply text-white
+            p-2
+            uppercase
+            transition-all
+            duration-300;
+
+        &:hover {
+            color: theme('colors.primary');
+
+            @apply bg-white;
+        }
+    }
+
     &--v3 {
         color: theme('colors.primary');
         background-color: theme('colors.secondary');
@@ -25,4 +41,17 @@
                 text-center;
         }
     }
+
+    &--share {
+        @apply px-4;
+
+        &:hover {
+            @apply bg-black;
+        }
+
+        &:not(:last-child) {
+            @apply mr-2;
+        }
+    }
 }
+
