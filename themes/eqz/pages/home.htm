@@ -27,25 +27,27 @@ postPage = "blog/post"
 [youtubeVideosList]
 ==
 <section id="blogPostsGrid_component"
-    class="container mx-auto my-4 mt-10 text-white">
+    class="c-home-section">
     {% component 'blogPostsGrid' %}
 </section>
 <section id="highlightedPlayers_component"
-    class="container mx-auto my-4 text-white">
-    <h2 class="text-6xl text-center font-bold uppercase py-10 break-all"
-        style="text-shadow: 0px 0px 20px rgba(68,196,253,0.85);">
+    class="c-home-section mt-0">
+    <h2 class="c-highlighted-creators__title">
         Equizers
         <br/>
         Creators
     </h2>
-    {% component 'contenteditor' file="home/creators_description.htm" fixture="p" class="text-center pb-4 home-text-shadow" %}
+    {% component 'contenteditor'
+        file="home/creators_description.htm"
+        fixture="p"
+        class="c-highlighted-creators__description u-primary-text-shadow" %}
     {% component 'highlightedCreators' %}
 </section>
 <section id="blogCategoryGrid_component"
-    class="container mx-auto my-4 mt-10 text-white">
+    class="c-home-section">
     {% component 'blogCategoryGrid' %}
 </section>
 <section id="youtubeVideosList_component"
-    class="container mx-auto my-4 mt-10 text-white h-[570px]">
+    class="c-home-section lg:h-[570px]">
     {% component 'youtubeVideosList' %}
 </section>

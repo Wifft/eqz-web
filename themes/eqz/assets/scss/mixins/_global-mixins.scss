@@ -1,0 +1,7 @@
+@mixin a-underline {
+    a {
+        &:hover {
+            @apply underline;
+        }
+    }
+}

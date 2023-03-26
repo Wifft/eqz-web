@@ -1,0 +1,145 @@
+.c-navbar {
+    $parent: &;
+
+    background-image: theme('backgroundImage.noisy-primary');
+
+    @apply px-2
+        border-b-2
+        border-b-white
+        shadow-xl;
+
+    &__container {
+        @apply container
+            flex
+            flex-wrap
+            items-center
+            mx-auto
+            py-4;
+
+        a {
+            @apply flex
+                items-center;
+
+            img {
+                @apply h-12 mr-3;
+
+                @screen lg {
+                    @apply h-16;
+                }
+            }
+        }
+
+        #{$parent}__mobile-btn {
+            @apply inline-flex
+                items-center
+                p-2
+                ml-auto
+                text-sm
+                rounded-lg
+                text-gray-400;
+
+            @screen lg {
+                @apply hidden;
+            }
+
+            &:hover {
+                @apply bg-gray-700;
+            }
+
+            &:focus {
+                @apply ring-gray-600
+                    outline-none
+                    ring-2;
+            }
+        }
+
+        @mixin link-style($display) {
+            display: $display;
+
+            @apply py-2
+                pl-3
+                pr-4
+                uppercase;
+
+            @if ($display == flex) {
+                @apply items-center
+                    justify-between;
+            }
+
+            @screen lg {
+                @apply p-0;
+            }
+
+            &:hover {
+                @apply text-white;
+            }
+        }
+
+        #{$parent}__link {
+            @include link-style(block);
+        }
+
+        #{$parent}-dropdown {
+            @apply w-full;
+
+            & > ul {
+                @apply flex
+                    flex-col
+                    p-4
+                    mt-4
+                    border
+                    border-gray-700
+                    rounded-lg
+                    bg-gray-800
+                    uppercase;
+
+                @screen lg {
+                    @apply flex-row
+                        space-x-8
+                        mt-0
+                        text-sm
+                        font-medium
+                        border-0
+                        bg-transparent;
+                }
+            }
+
+            &__btn {
+                @include link-style(flex);
+            }
+
+            &__content {
+                @apply z-10
+                    font-normal
+                    bg-gray-700
+                    divide-y
+                    divide-gray-600
+                    rounded-lg
+                    shadow
+                    w-44;
+
+                ul {
+                    @apply py-2
+                        text-sm
+                        text-gray-400;
+                }
+            }
+
+            &__link {
+                @apply block
+                    px-4
+                    py-2;
+
+                &:hover {
+                    @apply bg-gray-600
+                        text-white;
+                }
+            }
+
+            @screen lg {
+                @apply block
+                    w-auto;
+            }
+        }
+    }
+}

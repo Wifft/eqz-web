@@ -1,0 +1,71 @@
+.c-blog-posts-grid {
+    @apply grid
+        grid-cols-1
+        gap-4
+        h-full;
+
+    @screen lg {
+        height: 528px;
+        grid-template-columns: 60% 40%;
+    }
+
+    &__rows {
+        @apply grid
+            grid-rows-1
+            gap-4;
+
+        @screen lg {
+            @apply grid-rows-2;
+        }
+    }
+
+    &-post {
+        border-color: theme('colors.overlay--v2');
+
+        @apply border
+            rounded-3xl
+            bg-cover
+            bg-center
+            shadow-xl;
+
+        &__container {
+            height: 436px;
+
+            @apply flex
+                rounded-3xl
+                bg-overlay
+                transition-all
+                duration-1000;
+
+            @screen lg {
+                @apply h-full;
+            }
+
+            &:hover {
+                background-color: theme('colors.overlay--v2');
+
+                @apply transition-all
+                    duration-1000;
+            }
+        }
+
+        &__info {
+            @apply self-end
+                p-4;
+
+            @include a-underline;
+        }
+
+        &__title {
+            @apply text-4xl
+                font-bold
+                uppercase;
+
+            @include a-underline;
+        }
+
+        &__summary {
+            @apply text-sm;
+        }
+    }
+}

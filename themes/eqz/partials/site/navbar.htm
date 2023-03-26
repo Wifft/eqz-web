@@ -1,33 +1,23 @@
-<nav class="px-2 bg-noisy--primary border-b-2 border-b-white shadow-xl">
-    <div class="container flex flex-wrap items-center mx-auto py-4">
-        <a class="flex items-center"
-            href="{{ 'home'|page(false) }}">
-            <img class="h-12 mr-3 lg:h-16"
-                src="{{ 'assets/img/eqz_logo.webp'|theme }}"
+<nav class="c-navbar">
+    <div class="c-navbar__container">
+        <a href="{{ 'home'|page(false) }}">
+            <img src="{{ 'assets/img/eqz_logo.webp'|theme }}"
                 alt="{{ env('APP_NAME') }}"
                 title="{{ env('APP_NAME') }}"/>
         </a>
-        <button class="inline-flex items-center p-2 ml-auto text-sm rounded-lg text-gray-400 hover:bg-gray-700 focus:ring-gray-600 lg:hidden focus:outline-none focus:ring-2"
+        <button class="c-navbar__mobile-btn"
             type="button"
             data-collapse-toggle="navbar-dropdown"
             aria-controls="navbar-dropdown"
             aria-expanded="false">
             <span class="sr-only">Abrir el menú principal</span>
-            <svg class="w-6 h-6"
-                aria-hidden="true"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                    clip-rule="evenodd"></path>
-            </svg>
+            {% partial 'svg/mobile-menu' only %}
         </button>
         <div id="navbar-dropdown"
-            class="hidden w-full lg:block lg:w-auto">
-            <ul class="flex flex-col p-4 mt-4 border border-gray-700 rounded-lg bg-gray-800 lg:flex-row lg:space-x-8 lg:mt-0 lg:text-sm lg:font-medium lg:border-0 lg:bg-transparent uppercase">
+            class="c-navbar-dropdown hidden">
+            <ul>
                 <li>
-                    <a class="navbar-link {{ viewBag.activeMenu is same as('blog') ? 'text-white' : 'text-gray-400' }}"
+                    <a class="c-navbar__link {{ viewBag.activeMenu is same as('blog') ? 'text-white' : 'text-gray-400' }}"
                         href="{{ 'blog/posts'|page({'page':1}) }}"
                         aria-current="page">
                         Noticias
@@ -35,28 +25,19 @@
                 </li>
                 <li>
                     <button id="dropdownNavbarLink_rosters"
-                        class="flex items-center justify-between py-2 pl-3 pr-4 {{ viewBag.activeMenu is same as('rosters') ? 'text-white' : 'text-gray-400' }} lg:p-0 hover:text-white uppercase"
+                        class="c-navbar-dropdown__btn {{ viewBag.activeMenu is same as('rosters') ? 'text-white' : 'text-gray-400' }}"
                         href="{{ 'rosters'|page(false) }}"
                         data-dropdown-toggle="dropdownNavbar_rosters">
                         Equipos
-                        <svg class="w-5 h-5 ml-1"
-                            aria-hidden="true"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
+                        {% partial 'svg/chevron-down' only %}
                     </button>
                     <div id="dropdownNavbar_rosters"
-                        class="z-10 hidden font-normal bg-gray-700 divide-y divide-gray-600 rounded-lg shadow w-44">
-                        <ul class="py-2 text-sm text-gray-400"
-                            aria-labelledby="dropdownNavbarLink_rosters">
+                        class="c-navbar-dropdown__content hidden">
+                        <ul aria-labelledby="dropdownNavbarLink_rosters">
                             {% for roster in rosters %}
                                 <li>
-                                    <a href="{{ 'rosters'|page(false )}}#{{ roster.slug }}"
-                                        class="block px-4 py-2 hover:bg-gray-600 hover:text-white">
+                                    <a class="c-navbar-dropdown__link"
+                                        href="{{ 'rosters'|page(false )}}#{{ roster.slug }}">
                                         {{ roster.title }}
                                     </a>
                                 </li>
@@ -65,19 +46,19 @@
                     </div>
                 </li>
                 <li>
-                    <a class="navbar-link {{ viewBag.activeMenu is same as('creators') ? 'text-white' : 'text-gray-400' }}"
+                    <a class="c-navbar__link {{ viewBag.activeMenu is same as('creators') ? 'text-white' : 'text-gray-400' }}"
                         href="{{ 'creators/list'|page(false) }}">
                         Creadores
                     </a>
                 </li>
                 <li>
-                    <a class="navbar-link {{ viewBag.activeMenu is same as('club') ? 'text-white' : 'text-gray-400' }}"
+                    <a class="c-navbar__link {{ viewBag.activeMenu is same as('club') ? 'text-white' : 'text-gray-400' }}"
                         href="{{ 'about'|page(false) }}">
                         El Club
                     </a>
                 </li>
                 <li>
-                    <a class="navbar-link text-gray-400"
+                    <a class="c-navbar__link text-gray-400"
                         href="https://www.youtube.com/watch?v=octAO_3R0UE&list=PL-QbgQD1pecACh1z6EtjtWILv9tMfce0S"
                         target="_blank"
                         rel="external noopener noreferrer"
@@ -87,31 +68,22 @@
                 </li>
                 <li>
                     <button id="dropdownNavbarLink_downloads"
-                        class="flex items-center justify-between py-2 pl-3 pr-4 {{ viewBag.activeMenu is same as('downloads') ? 'text-white' : 'text-gray-400' }} lg:p-0 hover:text-white uppercase"
+                        class="c-navbar-dropdown__btn {{ viewBag.activeMenu is same as('downloads') ? 'text-white' : 'text-gray-400' }}"
                         data-dropdown-toggle="dropdownNavbar_downloads">
                         Descargas
-                        <svg class="w-5 h-5 ml-1"
-                            aria-hidden="true"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
+                        {% partial 'svg/chevron-down' only %}
                     </button>
                     <div id="dropdownNavbar_downloads"
-                        class="z-10 hidden font-normal bg-gray-700 divide-y divide-gray-600 rounded-lg shadow w-44">
-                        <ul class="py-2 text-sm text-gray-400"
-                            aria-labelledby="dropdownNavbarLink_downloads">
+                        class="c-navbar-dropdown__content hidden">
+                        <ul aria-labelledby="dropdownNavbarLink_downloads">
                             <li>
-                                <a class="block px-4 py-2 {{ viewBag.activeSubmenu is same as('wallpapers') ? 'text-white' : 'text-gray-400' }} hover:bg-gray-600"
+                                <a class="c-navbar-dropdown__link {{ viewBag.activeSubmenu is same as('wallpapers') ? 'text-white' : 'text-gray-400' }}"
                                     href="{{ 'downloads/wallpapers'|page(false) }}">
                                     Wallpapers
                                 </a>
                             </li>
                             <li>
-                                <a class="block px-4 py-2 {{ viewBag.activeSubmenu is same as('branding') ? 'text-white' : 'text-gray-400' }} hover:bg-gray-600"
+                                <a class="c-navbar-dropdown__link {{ viewBag.activeSubmenu is same as('branding') ? 'text-white' : 'text-gray-400' }}"
                                     href="{{ 'downloads/branding'|page(false) }}">
                                     Branding
                                 </a>

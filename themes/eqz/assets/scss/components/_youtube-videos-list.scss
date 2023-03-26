@@ -1,0 +1,90 @@
+.c-youtube-videos-list {
+    @apply bg-white
+        rounded-lg
+        font-bold
+        mb-16
+        p-8;
+
+    &__title {
+        color: theme('colors.primary');
+
+        @apply text-2xl
+            uppercase;
+    }
+
+    &__grid {
+        @apply grid
+            grid-cols-1
+            gap-x-10;
+
+        @screen lg {
+            @apply grid-cols-4;
+        }
+    }
+
+    &-video {
+        @apply relative
+            mt-8;
+
+        @screen lg {
+            @apply border-b-0;
+        }
+
+        .c-btn--v3 {
+            @apply hidden;
+
+            @screen lg {
+                @apply block;
+            }
+        }
+
+        &__image {
+            @apply block;
+
+            img {
+                @apply w-full object-cover;
+            }
+        }
+
+        &__info {
+            grid-template-rows: auto auto;
+            color: theme('colors.primary');
+
+            @apply bg-white
+                grid
+                static
+                p-4
+                rounded-b-lg;
+
+            @include a-underline;
+
+            @screen lg {
+                grid-template-rows: 120px auto;
+
+                @apply absolute;
+            }
+
+            h3, span {
+                @apply text-center;
+            }
+
+            h3 {
+                @apply text-lg;
+            }
+
+            span {
+                @apply text-xs;
+
+                @screen lg {
+                    @apply text-start;
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            border-color: theme('colors.primary');
+
+            @apply border-b;
+        }
+    }
+}

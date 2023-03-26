@@ -1,0 +1,145 @@
+.c-footer {
+    background-image: theme('backgroundImage.noisy-primary');
+
+    @apply mt-auto
+        p-4
+        shadow
+        border-t-2
+      border-t-white;
+
+    @screen md {
+        @apply px-6
+            py-8;
+    }
+
+    &-brands {
+        &__container {
+            &--flex {
+                @apply flex
+                    items-center
+                    justify-center
+                    mb-8;
+            }
+
+            &--grid {
+                @apply grid
+                    grid-cols-1
+                    self-center
+                    text-center
+                    gap-4;
+
+                @screen md {
+                    @apply grid-cols-3
+                        flex
+                        flex-wrap;
+                }
+            }
+        }
+
+        &__item {
+            @apply h-full;
+
+            a {
+                @apply block
+                    mx-6;
+
+                img {
+                    @apply h-16
+                        m-auto;
+
+                    @screen md {
+                        @apply m-0;
+                    }
+                }
+            }
+
+            &:last-child {
+                @screen md {
+                    @apply border-l-2
+                        border-l-white;
+                }
+            }
+        }
+    }
+
+    &__white-line {
+        max-width: 685px;
+
+        @apply my-8 border-white mx-auto;
+    }
+
+    &__logo {
+        @apply flex
+            items-center
+            justify-center
+            mb-8;
+
+        a {
+            @apply flex
+                items-center
+                mb-4
+                lg:mb-0;
+
+            @screen lg {
+                @apply mb-0;
+            }
+
+            img {
+                @apply h-8
+                    mr-3;
+            }
+
+            span {
+                @apply self-center
+                    text-2xl
+                    text-white
+                    font-semibold
+                    whitespace-nowrap;
+            }
+        }
+    }
+
+    &__legal-texts {
+        @apply flex
+            items-center
+            justify-center
+            mb-8;
+
+        ul {
+            @apply grid
+                grid-cols-1
+                self-center
+                text-center
+                gap-4
+                text-sm
+                text-white
+                uppercase;
+
+            @screen md {
+                @apply grid-cols-3
+                    flex
+                    flex-wrap
+                    items-center;
+            }
+
+            @include a-underline;
+
+            a {
+                @apply mr-4;
+
+                @screen md {
+                    @apply mr-6;
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        @apply block
+            text-sm
+            text-gray-400
+            text-center;
+
+        @include a-underline;
+    }
+}

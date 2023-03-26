@@ -1,11 +1,11 @@
 {% set videos = __SELF__.videos %}
 {% if videos|length > 0 %}
-    <div class="bg-white rounded-lg font-bold mb-16 p-8">
-        <h2 class="text-primary text-2xl uppercase">
+    <div class="c-youtube-videos-list">
+        <h2 class="c-youtube-videos-list__title">
             <i class="fas fa-play"></i>
             Últimos vídeos
         </h2>
-        <div class="grid grid-cols-1 gap-x-10 lg:grid-cols-4">
+        <div class="c-youtube-videos-list__grid">
             {% for video in videos %}
                 {% partial '@video' video = video only %}
             {% endfor %}

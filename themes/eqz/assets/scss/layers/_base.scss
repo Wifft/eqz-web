@@ -1,0 +1,28 @@
+@layer base {
+    @font-face {
+        font-family: 'Pilat Extended';
+        src: url('/themes/eqz/assets/fonts/pilat_extended.ttf') format('truetype');
+    }
+
+    * {
+        font-family: 'Pilat Extended', sans-serif;
+    }
+
+    body {
+        @apply flex
+            flex-col
+            min-h-screen
+            bg-cover
+            bg-center
+            bg-fixed;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply break-all;
+    }
+}

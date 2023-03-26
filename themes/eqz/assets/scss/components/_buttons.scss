@@ -1,0 +1,28 @@
+.c-btn {
+    &--v3 {
+        color: theme('colors.primary');
+        background-color: theme('colors.secondary');
+
+        @apply p-2
+            uppercase
+            font-bold
+            rounded-xl
+            shadow-xl
+            transition-all
+            duration-300;
+
+        &:hover {
+            @apply bg-primary
+                text-secondary;
+        }
+
+        &_abs {
+            left: 258px;
+            top: -18px;
+            width: 94px;
+
+            @apply absolute
+                text-center;
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.c-highlighted-creators {
+    &__title {
+        text-shadow: 0px 0px 20px rgba(68,196,253,0.85);
+
+        @apply text-6xl
+            text-center
+            font-bold
+            uppercase
+            py-10;
+    }
+
+    &__description {
+        @apply text-center
+            pb-4;
+    }
+
+    &__container {
+        @apply grid
+            grid-cols-1
+            gap-x-0;
+
+        @screen lg {
+            @apply grid-cols-6
+                gap-x-12;
+        }
+    }
+
+    &-creator {
+        @apply relative
+            mb-10;
+
+        &__star {
+            top: -33px;
+            left: -40px;
+
+            @apply hidden
+                absolute
+                z-10;
+
+            @screen lg {
+                @apply inline;
+            }
+        }
+
+        &__image {
+            @apply relative overflow-hidden rounded-t-lg;
+
+            img {
+                height:  auto;
+
+                @apply object-cover
+                    w-full
+                    transition-all
+                    duration-300
+                    ease-linear
+                    grayscale;
+
+                @screen lg {
+                    @apply h-96;
+                }
+            }
+
+            &:hover {
+                img {
+                    @apply filter-none
+                        scale-110;
+                }
+            }
+        }
+
+        &__info {
+            @apply relative
+                mt-4
+                text-white
+                text-center;
+
+            @screen lg {
+                @apply text-start;
+            }
+
+            h3 {
+                @apply text-3xl
+                    font-bold;
+
+                @include a-underline;
+            }
+
+            p {
+                @apply text-2xl;
+            }
+        }
+
+        &__socials {
+            @apply flex
+                justify-center
+                text-gray-200
+                text-2xl;
+
+            @screen lg {
+                @apply justify-start;
+            }
+
+            a {
+                @apply mr-2
+                    transition-all
+                    duration-200
+                    ease-linear;
+
+                &:hover {
+                    color: theme('colors.secondary');
+                }
+            }
+        }
+    }
+}

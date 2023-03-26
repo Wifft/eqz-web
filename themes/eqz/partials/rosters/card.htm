@@ -8,13 +8,13 @@
         </picture>
     </div>
     <div class="relative mt-4 text-white z-10">
-        <h3 class="text-3xl font-bold home-text-shadow break-all">
+        <h3 class="text-3xl font-bold u-primary-text-shadow break-all">
             {{ player.title }}
         </h3>
-        <p class="text-2xl home-text-shadow">{{ player.role }}</p>
+        <p class="text-2xl u-primary-text-shadow">{{ player.role }}</p>
         <div class="flex text-gray-200 text-2xl">
             {% for social in player.socials %}
-                <a class="mr-2 home-text-shadow transition-all duration-200 ease-linear hover:text-secondary"
+                <a class="mr-2 u-primary-text-shadow transition-all duration-200 ease-linear hover:text-secondary"
                     href="{{ social.url }}"
                     target="_blank"
                     rel="external nofollow noopener noreferrer"

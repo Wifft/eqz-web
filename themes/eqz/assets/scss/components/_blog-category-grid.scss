@@ -1,0 +1,59 @@
+.c-blog-category-grid {
+    @apply grid
+        grid-cols-1
+        gap-x-10;
+
+    @screen lg {
+        @apply grid-cols-3;
+    }
+
+    &-post {
+        @apply mt-10;
+
+        &__image {
+            @apply relative
+                overflow-hidden
+                rounded-lg;
+
+            img {
+                @apply object-cover
+                    h-auto
+                    w-full
+                    transition-all
+                    duration-300
+                    ease-linear;
+
+                @screen lg {
+                    @apply h-96;
+                }
+            }
+
+            &:hover {
+                img {
+                    @apply scale-110;
+                }
+            }
+        }
+
+        &__info {
+            @apply relative
+                mt-4
+                text-white
+                text-middle;
+
+            @screen lg {
+                @apply text-start;
+            }
+
+            span, h3 {
+                @include a-underline;
+            }
+
+            h3 {
+                @apply text-3xl
+                    uppercase
+                    font-bold;
+            }
+        }
+    }
+}

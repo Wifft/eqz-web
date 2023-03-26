@@ -1,27 +1,30 @@
-<article class="relative mt-8">
-    <a class="bg-secondary text-primary p-2 uppercase font-bold rounded-xl shadow-xl transition-all duration-300 hover:bg-primary hover:text-secondary absolute left-[258px] top-[-18px] w-[94px] text-center"
+<article class="c-youtube-videos-list-video">
+    <a class="c-btn--v3 c-btn--v3_abs"
         href="https://youtu.be/{{ video.video_id }}"
         target="_blank"
         rel="external noopener noreferrer">
         Ver +
     </a>
-    <div class="block">
+    <div class="c-youtube-videos-list-video__image">
         <a href="https://youtu.be/{{ video.video_id }}"
             target="_blank"
             rel="external noopener noreferrer">
             <picture>
-                <img class="w-full object-cover"
-                    src="{{ video.video_thumb_url }}"/>
+                <img src="{{ video.video_thumb_url }}"
+                    alt="{{ video.title }}"
+                    title="{{ video.title }}"/>
             </picture>
         </a>
     </div>
-    <div class="bg-white text-black grid grid-rows-[120px_auto] absolute p-4 rounded-b-lg">
-        <a class="block"
-            href="https://youtu.be/{{ video.video_id }}"
-            target="_blank"
-            rel="external noopener noreferrer">
-            <h3 class="text-lg text-middle hover:underline">{{ video.title }}</h3>
-        </a>
-        <span class="text-xs">{{ video.upload_date|date('d/m/Y') }}</span>
+    <div class="c-youtube-videos-list-video__info">
+        <h3>
+            <a href="https://youtu.be/{{ video.video_id }}"
+                target="_blank"
+                rel="external noopener noreferrer"
+                title="{{ video.title }}">
+                {{ str_limit(video.title, 32, '...')|upper }}
+            </a>
+        </h3>
+        <span>{{ video.upload_date|date('d/m/Y') }}</span>
     </div>
 </article>

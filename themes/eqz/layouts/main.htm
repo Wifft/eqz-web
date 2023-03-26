@@ -51,8 +51,7 @@ function onStart() : void
         {% endif %}
         {% partial 'site/head-styles' only %}
     </head>
-    <body class="flex flex-col min-h-screen bg-cover bg-center bg-fixed"
-        style="background-image: url('{{ 'assets/img/body_bg.webp'|theme }}');">
+    <body style="background-image: url('{{ 'assets/img/body_bg.webp'|theme }}');">
         {% if not maintenanceMode %}
             {% flash %}
                 <div class="alert alert-{{ type }}">
