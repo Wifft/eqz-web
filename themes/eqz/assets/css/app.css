@@ -12685,8 +12685,11 @@ readers do not read off random characters that represent icons */
   color: #010519;
   text-align: justify;
 }
-.c-blog-post-content__content p:not(:last-child) {
+.c-blog-post-content__content p:not(:first-child) {
   padding-bottom: 16px 0;
+}
+.c-blog-post-content__content p:last-child {
+  padding-bottom: 0 !important;
 }
 .c-blog-post__sidebar--categories {
   padding-left: 2rem;

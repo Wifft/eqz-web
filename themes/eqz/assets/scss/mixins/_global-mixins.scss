@@ -8,8 +8,12 @@
 
 @mixin spaced-wysiwyg-p {
     p {
-        &:not(:last-child) {
+        &:not(:first-child) {
             padding-bottom: 16px 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0 !important;
         }
     }
 }
