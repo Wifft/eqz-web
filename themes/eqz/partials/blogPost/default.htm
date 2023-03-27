@@ -2,22 +2,21 @@
 {% if post is empty %}
     {% do abort(404) %}
 {% endif %}
-<article class="bg-secondary--translucent p-4 shadow-xl">
-    <h1 class="text-primary text-4xl uppercase font-bold break-all">
+<article class="c-blog-post__card">
+    <h1 class="c-blog-post-content__title">
         {{ post.title }}
     </h1>
-    <p class="py-2 text-gray-600">
-        {% if post.categories|length %}
+    <p class="c-blog-post-content__info">
+        {% if post.categories|length > 0 %}
             {% for category in post.categories %}
-                <a class="bg-gray-600 text-white text-xs font-medium mr-2 px-4 py-1 rounded"
-                    href="{{ category.url }}">
+                <a href="{{ category.url }}">
                     {{ category.name }}
                 </a>
             {% endfor %}
         {% endif %}
-        <span class="text-sm">{{ post.published_at|date('d/m/Y') }}</span>
+        <span>{{ post.published_at|date('d/m/Y') }}</span>
     </p>
-    {% if post.featured_images|length %}
+    {% if post.featured_images|length > 0 %}
         <picture>
             <img src="{{ post.featured_images[0].getThumb('auto', 'auto', {'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
                 alt="{{ post.title }}"
@@ -25,7 +24,7 @@
         </picture>
     {% endif %}
     {% partial 'share-buttons' title = post.title page = ''|page only %}
-    <div class="text-primary text-justify">
+    <div class="c-blog-post-content__content">
         {{ post.content_html|raw }}
     </div>
 </article>

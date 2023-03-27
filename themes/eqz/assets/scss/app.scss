@@ -8,15 +8,3 @@
 @import "mixins/mixins";
 @import "utilities/utilities";
 @import "components/components";
-
-// Ñapa temporal para evitar conflictos con el bootstrap que inyecta el contenteditor.
-.text-middle {
-    @apply text-center;
-}
-
-#legalText_page, #aboutUs_page {
-    p {
-        padding: 16px 0;
-    }
-}
-

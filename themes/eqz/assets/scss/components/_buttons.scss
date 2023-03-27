@@ -1,24 +1,32 @@
 .c-btn {
-    &--v2 {
-        background-color: theme('colors.primary');
+    @mixin color-switcher($firstColor, $secondColor) {
+        color: $firstColor;
+        background-color: $secondColor;
 
-        @apply text-white
-            p-2
+        &:hover {
+            color: $secondColor;
+            background-color: $firstColor;
+        }
+    }
+
+    @mixin square-plain-btn($firstColor, $secondColor) {
+        @apply p-2
             uppercase
             transition-all
             duration-300;
 
-        &:hover {
-            color: theme('colors.primary');
-
-            @apply bg-white;
-        }
+        @include color-switcher($firstColor, $secondColor);
     }
 
-    &--v3 {
-        color: theme('colors.primary');
-        background-color: theme('colors.secondary');
+    &--primary {
+        @include square-plain-btn(white, theme('colors.primary'));
+    }
 
+    &--secondary {
+        @include square-plain-btn(white, theme('colors.secondary'));
+    }
+
+    &--rounded {
         @apply p-2
             uppercase
             font-bold
@@ -27,10 +35,7 @@
             transition-all
             duration-300;
 
-        &:hover {
-            @apply bg-primary
-                text-secondary;
-        }
+        @include color-switcher(theme('colors.primary'), theme('colors.secondary'));
 
         &_abs {
             left: 258px;

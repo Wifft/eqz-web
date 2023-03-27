@@ -1,0 +1,126 @@
+.c-blog-post {
+    @apply container
+        mx-auto
+        my-0;
+
+    @screen lg {
+        @apply my-4;
+    }
+
+    &__layout {
+        @apply grid
+            grid-cols-1
+            gap-4;
+
+        @screen lg {
+            grid-template-columns: 70% 30%;
+        }
+    }
+
+    &__card {
+        background-color: theme('colors.secondary--translucent');
+
+        @apply p-4
+            shadow-xl;
+    }
+
+    &-content {
+        &__title {
+            color: theme('colors.primary');
+
+            @apply text-4xl
+                uppercase
+                font-bold;
+        }
+
+        &__info {
+            @apply py-2 text-gray-600;
+
+            @include a-underline;
+
+            a {
+                @apply bg-gray-600
+                    text-white
+                    text-sm
+                    font-medium
+                    mr-2
+                    px-4
+                    py-1
+                    rounded;
+            }
+
+            span {
+                @apply text-sm;
+            }
+        }
+
+        &__content {
+            color: theme('colors.primary');
+
+            @apply text-justify;
+
+            @include spaced-wysiwyg-p;
+        }
+    }
+
+    &__sidebar {
+        @mixin title {
+            h2 {
+                @apply mb-4
+                    text-white
+                    text-2xl
+                    font-bold;
+            }
+        }
+
+        @mixin spacing($isLast: false) {
+            @apply px-8 py-4;
+
+            @if ($isLast) {
+                @apply mt-4;
+            }
+        }
+
+        &--categories {
+            @include spacing;
+            @include title;
+
+            ul, p {
+                @apply text-white
+                    text-lg;
+            }
+
+            ul {
+                li {
+                    @include a-underline;
+                }
+            }
+
+        }
+
+        &--last-news {
+            @include spacing(true);
+            @include title;
+
+            ul, p {
+                @apply text-white;
+            }
+
+            ul {
+                li {
+                    @apply py-1;
+
+                    @include a-underline;
+
+                    & > a {
+                        @apply text-lg;
+                    }
+
+                    & > span {
+                        @apply text-gray-600;
+                    }
+                }
+            }
+        }
+    }
+}

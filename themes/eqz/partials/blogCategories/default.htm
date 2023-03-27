@@ -1,13 +1,13 @@
-<div class="bg-secondary--translucent px-8 py-4 shadow-xl">
-    <h2 class="mb-4 text-white text-2xl font-bold break-all">
+<div class="c-blog-post__card c-blog-post__sidebar--categories">
+    <h2>
         Categorías
     </h2>
     {% if __SELF__.categories|length > 0 %}
-        <ul class="text-white text-lg">
+        <ul>
             {% partial '@items' categories = __SELF__.categories only %}
         </ul>
     {% else %}
-        <p class="text-white">
+        <p>
             No se han encontrado categorías.
         </p>
     {% endif %}
