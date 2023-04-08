@@ -1,0 +1,73 @@
+.c-creators-profile {
+    background-color: theme('colors.secondary--translucent');
+
+    &__container {
+        @apply container
+            mx-auto;
+    }
+
+    &__grid {
+        @apply grid
+            grid-cols-1
+            items-center;
+
+        @screen lg {
+            @apply grid-cols-2
+                p-4
+                p-10
+                gap-4
+                gap-16;
+        }
+    }
+
+    &__image {
+        img {
+            @apply w-full;
+        }
+    }
+
+    &__info {
+        @apply text-white;
+
+        h1 {
+            @apply text-4xl
+                font-bold;
+        }
+
+        & > div {
+            & > h2 {
+                @apply text-xl
+                    pb-8;
+            }
+
+            & > div {
+                @apply text-justify;
+
+                @include spaced-wysiwyg-p;
+            }
+        }
+    }
+
+    &__socials {
+        @apply flex
+            text-gray-200
+            text-2xl
+            my-4;
+
+        @screen lg {
+            @apply my-8;
+        }
+
+        a {
+            @apply mr-2
+                text-white
+                transition-all
+                duration-200
+                ease-linear;
+
+            &:hover {
+                color: theme('colors.primary');
+            }
+        }
+    }
+}

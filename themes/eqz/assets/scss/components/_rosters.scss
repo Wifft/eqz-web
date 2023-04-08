@@ -1,0 +1,14 @@
+.c-rosters {
+    @apply container
+        mx-auto
+        my-4;
+
+    &__roster {
+        @apply my-8;
+
+        img {
+            @apply m-auto
+                w-96;
+        }
+    }
+}

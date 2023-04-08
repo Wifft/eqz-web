@@ -1,0 +1,137 @@
+.c-profile-card {
+    $parent: &;
+
+    @apply mb-10;
+
+    &__image {
+        @apply relative
+            overflow-hidden;
+
+        img {
+            height:  auto;
+
+            @apply object-cover
+                w-full
+                transition-all
+                duration-300
+                ease-linear
+                grayscale;
+
+            @screen lg {
+                @apply h-96;
+            }
+        }
+
+        &:hover {
+            img {
+                @apply filter-none
+                    scale-110;
+            }
+        }
+    }
+
+    &__info {
+        @apply relative
+            mt-4
+            text-white
+            text-center;
+
+        @screen lg {
+            @apply text-start;
+        }
+
+        h3 {
+            @apply text-3xl
+                font-bold;
+
+            @include a-underline;
+        }
+
+        p {
+            @apply text-2xl;
+        }
+    }
+
+    &__socials {
+        @apply flex
+            justify-center
+            text-gray-200
+            text-2xl;
+
+        @screen lg {
+            @apply justify-start;
+        }
+
+        a {
+            @apply mr-2
+                transition-all
+                duration-200
+                ease-linear;
+
+            &:hover {
+                color: theme('colors.secondary');
+            }
+        }
+    }
+
+    &--starred {
+        @apply relative;
+
+        #{$parent}__image {
+            @apply rounded-t-lg;
+        }
+
+        &__star {
+            top: -33px;
+            left: -40px;
+
+            @apply hidden
+                absolute
+                z-10;
+
+            @screen lg {
+                @apply inline;
+            }
+        }
+    }
+
+    &--roster {
+        @apply mb-0
+            mx-4
+            mt-10;
+
+        #{$parent}__image {
+            img {
+                @apply static
+                    scale-110
+                    filter-none;
+            }
+
+            &:hover {
+                img {
+                    @apply scale-110
+                        grayscale;
+                }
+            }
+        }
+    }
+
+    &--creator {
+        @apply mb-0
+            mx-4
+            mt-10;
+
+        #{$parent}__image {
+            img {
+                @apply static
+                    filter-none;
+            }
+
+            &:hover {
+                img {
+                    @apply scale-110;
+                }
+            }
+        }
+    }
+}

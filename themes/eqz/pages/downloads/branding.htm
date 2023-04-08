@@ -14,10 +14,10 @@ activeMenu = "downloads"
 activeSubmenu = "branding"
 ==
 <section id="branding_page"
-    class="bg-secondary--translucent h-full">
-    <div class="container mx-auto py-8 text-white text-center">
-        <h1 class="text-4xl font-bold uppercase py-4">Descarga elementos corporativos</h1>
-        {% component 'contenteditor' file="downloads/branding_description.htm" fixture="p" class="text-xl py-4" %}
+    class="c-branding">
+    <div class="c-branding__container">
+        <h1 class="c-branding__title">Descarga elementos corporativos</h1>
+        {% component 'contenteditor' file="downloads/branding_description.htm" fixture="p" class="c-branding__description" %}
         <hr/>
         {% component 'branding' %}
     </div>

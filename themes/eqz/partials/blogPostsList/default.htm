@@ -20,7 +20,7 @@
             {% endif %}
 
             {% for page in 1..posts.lastPage %}
-                <li class="c-blog-posts-list-pagination__list--btn {{ posts.currentPage == page ? 'bg-secondary--translucent' : 'bg-primary--translucent' }}">
+                <li class="c-blog-posts-list-pagination__list--btn {{ posts.currentPage == page ? '!bg-secondary--translucent' : '!bg-primary--translucent' }}">
                     <a href="{{ this.page.baseFileName|page({(__SELF__.pageParam): page}) }}">
                         {{ page }}
                     </a>

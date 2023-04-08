@@ -1,0 +1,27 @@
+.c-creators-list {
+    @apply container
+        mx-auto
+        mt-4
+        mb-8
+        text-white;
+
+    &__title {
+        @apply text-6xl
+            text-center
+            font-bold
+            uppercase
+            py-10;
+    }
+
+    &__description {
+        @apply text-center;
+    }
+
+    &__grid {
+        @apply grid grid-cols-1;
+
+        @screen lg {
+            @apply grid-cols-4;
+        }
+    }
+}

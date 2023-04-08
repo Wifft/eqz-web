@@ -1,16 +1,15 @@
-<div class="container mx-auto pb-10">
-    <h2 class="text-3xl text-center text-white font-bold uppercase py-8 break-all">Trofeos obtenidos</h2>
-    <div class="flex flex-wrap items-center justify-center text-sm text-white uppercase">
+<div class="c-awards__container">
+    <h2 class="c-awards__title">Trofeos obtenidos</h2>
+    <div class="c-awards__grid">
         {% for award in awards %}
-            <article class="text-white text-center">
+            <article class="c-awards__item">
                 <picture>
-                    <img class="mx-auto"
-                        src="{{award.image[0].getThumb(128, 128, {'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
+                    <img src="{{award.image[0].getThumb(128, 128, {'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
                         alt="{{ award.title }}"
                         title="{{ award.title }}"/>
                 </picture>
-                <h3 class="text-2xl font-bold break-all">{{ award.title }}</h3>
-                <p class="text-sm">
+                <h3>{{ award.title }}</h3>
+                <p>
                     {% for roster in award.rosters %}
                         {{ roster.title }}
                         {% if not loop.index is same as(award.rosters|length) %}

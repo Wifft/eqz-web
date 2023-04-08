@@ -1,20 +1,19 @@
-<article class="mx-4 mt-10">
-    <div class="relative overflow-hidden group">
+<article class="c-profile-card c-profile-card--roster">
+    <div class="c-profile-card__image">
         <picture>
-            <img class="object-cover h-96 w-full transition-all duration-300 ease-linear group-hover:grayscale scale-110"
-                src="{{ player.image[0].getThumb('auto','auto',{'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
+            <img src="{{ player.image[0].getThumb('auto','auto',{'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
                 alt="{{ player.title }}"
                 title="{{ player.title }}"/>
         </picture>
     </div>
-    <div class="relative mt-4 text-white z-10">
-        <h3 class="text-3xl font-bold u-primary-text-shadow break-all">
+    <div class="c-profile-card__info">
+        <h3 class="u-primary-text-shadow">
             {{ player.title }}
         </h3>
-        <p class="text-2xl u-primary-text-shadow">{{ player.role }}</p>
-        <div class="flex text-gray-200 text-2xl">
+        <p class="u-primary-text-shadow">{{ player.role }}</p>
+        <div class="c-profile-card__socials">
             {% for social in player.socials %}
-                <a class="mr-2 u-primary-text-shadow transition-all duration-200 ease-linear hover:text-secondary"
+                <a class="u-primary-text-shadow"
                     href="{{ social.url }}"
                     target="_blank"
                     rel="external nofollow noopener noreferrer"

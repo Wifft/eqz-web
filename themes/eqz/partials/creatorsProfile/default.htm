@@ -2,28 +2,26 @@
 {% if creator is empty %}
     {% do abort(404) %}
 {% endif %}
-<article class="container mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-2 p-4 lg:p-10 gap-4 lg:gap-16 items-center">
-        <div>
+<article class="c-creators-profile__container">
+    <div class="c-creators-profile__grid">
+        <div class="c-creators-profile__image">
             <picture>
-                <img class="w-full"
-                    src="{{ creator.image[0].getThumb(720, 720, {'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
+                <img src="{{ creator.image[0].getThumb(720, 720, {'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
                     alt="{{ creator.nickname }}"
                     title="{{ creator.nickname }}"/>
             </picture>
             {% partial 'share-buttons' title = creator.nickname page = ''|page only %}
         </div>
-        <div class="text-white">
-            <h1 class="text-4xl font-bold">{{ creator.nickname }}</h1>
+        <div class="c-creators-profile__info">
+            <h1>{{ creator.nickname }}</h1>
             <div class="my-2">
-                <h2 class="text-xl pb-8 break-all">{{ creator.title }}</h2>
-                <div class="text-justify">
+                <h2>{{ creator.title }}</h2>
+                <div>
                     {{ creator.description|raw }}
                 </div>
-                <div class="flex text-gray-200 text-2xl my-4 lg:my-8">
+                <div class="c-creators-profile__socials">
                     {% for social in creator.socials %}
-                        <a class="mr-2 text-white transition-all duration-200 ease-linear hover:text-primary"
-                            href="{{ social.url }}"
+                        <a href="{{ social.url }}"
                             target="_blank"
                             rel="external nofollow noopener noreferrer"
                             title="{{ social.name }}">

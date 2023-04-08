@@ -1,0 +1,42 @@
+.c-about-us {
+    background-color: theme('colors.secondary--translucent');
+
+    &__container {
+        @apply container
+            mx-auto;
+    }
+
+    &__grid {
+        @apply grid
+            grid-cols-1
+            p-4
+            items-center;
+
+        @screen lg {
+            grid-template-columns: 30% 70%;
+
+            @apply p-10;
+        }
+    }
+
+    &__image {
+        img {
+            @apply w-full;
+        }
+    }
+
+    &__info {
+        @apply text-white;
+
+        h2 {
+            @apply text-4xl
+                pb-2;
+        }
+
+        div {
+            @apply text-justify;
+
+            @include spaced-wysiwyg-p;
+        }
+    }
+}

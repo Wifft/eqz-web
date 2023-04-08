@@ -1,0 +1,68 @@
+.c-wallpapers {
+    background-color: theme('colors.primary--translucent');
+
+    @apply h-full;
+
+    &__container {
+        @apply container
+            mx-auto
+            py-8
+            text-white
+            text-center;
+
+
+        h1, h2 {
+            @apply text-2xl
+                font-bold
+                uppercase
+                py-4;
+        }
+    }
+
+    &__grid {
+        @apply grid
+            grid-cols-1;
+
+        @screen lg {
+            @apply grid-cols-3;
+        }
+    }
+
+    &__item {
+        margin: 39px;
+
+        img {
+            @apply w-full
+                h-auto;
+
+            @screen lg {
+                @apply w-auto
+                    h-64;
+            }
+        }
+
+        div {
+            @apply my-4;
+
+            p {
+                @apply py-4;
+
+                a {
+                    background-color: theme('colors.secondary');
+
+                    @apply text-white
+                        p-2
+                        uppercase
+                        transition-all
+                        duration-300;
+
+                    &:hover {
+                        color: theme('colors.secondary');
+
+                        @apply bg-white;
+                    }
+                }
+            }
+        }
+    }
+}

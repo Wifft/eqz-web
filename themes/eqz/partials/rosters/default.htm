@@ -1,9 +1,8 @@
 {% for roster in rosters %}
     <div id="{{ roster.slug }}"
-        class="my-8">
+        class="c-rosters__roster">
         <picture>
-            <img class="m-auto w-96"
-                src="{{ roster.image[0].path }}"
+            <img src="{{ roster.image[0].path }}"
                 alt="{{ roster.title }}"
                 title="{{ roster.title }}"/>
         </picture>

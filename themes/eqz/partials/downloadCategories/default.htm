@@ -1,12 +1,12 @@
 {% for category in downloadCategories %}
     <article>
         {% if loop.first %}
-            <h1 class="text-2xl font-bold uppercase py-4 break-all">{{ category.title }}</h1>
+            <h1>{{ category.title }}</h1>
         {% else %}
-            <h2 class="text-2xl font-bold uppercase py-4 break-all">{{ category.title }}</h2>
+            <h2>{{ category.title }}</h2>
         {% endif %}
         <hr/>
-        <div class="grid grid-cols-1 lg:grid-cols-3">
+        <div class="c-wallpapers__grid">
             {% for file in category.files %}
                 {% partial '@wallpaper' file = file only %}
             {% endfor %}

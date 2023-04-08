@@ -1,10 +1,10 @@
 {% set klozzEasterEgg = [null, 'Klozz', 'es', 'un', 'ma', 'ri', 'con'] %}
-<article class="c-highlighted-creators-creator">
-    <img class="c-highlighted-creators-creator__star"
+<article class="c-profile-card c-profile-card--starred">
+    <img class="c-profile-card--starred__star"
         src="{{ ('assets/img/stars/eqz-star-' ~ idx ~ '.webp')|theme }}"
         alt="star-{{ idx }}"
         title="{{ klozzEasterEgg[idx] }}"/>
-    <div class="c-highlighted-creators-creator__image">
+    <div class="c-profile-card__image">
         <a href="{{ 'creators/profile'|page({'slug': creator.slug}) }}">
             <picture>
                 <img src="{{ creator.image[0].getThumb('auto', 'auto', {'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
@@ -13,14 +13,14 @@
             </picture>
         </a>
     </div>
-    <div class="c-highlighted-creators-creator__info">
+    <div class="c-profile-card__info">
         <h3 class="u-primary-text-shadow">
             <a href="{{ 'creators/profile'|page({'slug': creator.slug}) }}">
                 {{ creator.nickname }}
             </a>
         </h3>
         <p class="u-primary-text-shadow">{{ creator.title }}</p>
-        <div class="c-highlighted-creators-creator__socials">
+        <div class="c-profile-card__socials">
             {% for social in creator.socials %}
                 <a class="u-primary-text-shadow"
                     href="{{ social.url }}"

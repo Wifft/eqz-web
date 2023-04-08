@@ -1,0 +1,68 @@
+.c-branding {
+    background-color: theme('colors.secondary');
+
+    @apply h-full;
+
+    &__container {
+        @apply container
+            mx-auto
+            py-8
+            text-white
+            text-center;
+    }
+
+    &__title {
+        @apply text-4xl
+            font-bold
+            uppercase
+            py-4;
+    }
+
+    &__description {
+        @apply text-xl
+            py-4;
+    }
+
+    &__grid {
+        @apply grid
+            grid-cols-1;
+
+        @screen lg {
+            @apply grid-cols-3;
+        }
+    }
+
+    &__item {
+        h2 {
+            @apply text-2xl
+                font-bold
+                py-4;
+        }
+
+        img {
+            @apply w-auto
+                h-64
+                m-auto;
+        }
+
+        p {
+            @apply py-4;
+
+            a {
+                background-color: theme('colors.primary');
+
+                @apply text-white
+                    p-2
+                    uppercase
+                    transition-all
+                    duration-300;
+
+                &:hover {
+                    color: theme('colors.primary');
+
+                    @apply bg-white;
+                }
+            }
+        }
+    }
+}

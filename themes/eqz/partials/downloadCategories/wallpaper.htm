@@ -1,26 +1,23 @@
-<div class="m-[39px]">
+<article class="c-wallpapers__item">
     <picture>
-        <img class="lg:w-auto w-full lg:h-64 h-auto"
-            src="{{ file.thumb[0].getThumb(1280, 720, {'mode':'crop', 'quality':65, 'extension':'webp'}) }}"
+        <img src="{{ file.thumb[0].getThumb(1280, 720, {'mode':'crop', 'quality':65, 'extension':'webp'}) }}"
             alt="{{ file.title }}"
             title="{{ file.title }}"/>
     </picture>
-    <div class="my-4">
-        <p class="py-4">
-            <a class="bg-secondary text-white p-2 uppercase hover:bg-white hover:text-secondary transition-all duration-300"
-                href="{{ file.image_pc[0].path }}"
+    <div>
+        <p>
+            <a href="{{ file.image_pc[0].path }}"
                 target="_blank">
                 <i class="fas fa-download"></i>
                 Descargar para PC
             </a>
         </p>
-        <p class="py-4">
-            <a class="bg-secondary text-white p-2 uppercase hover:bg-white hover:text-secondary transition-all duration-300"
-                href="{{ file.image_mobile[0].path }}"
+        <p>
+            <a href="{{ file.image_mobile[0].path }}"
                 target="_blank">
                 <i class="fas fa-download"></i>
                 Descargar para móvil
             </a>
         </p>
     </div>
-</div>
+</article>
