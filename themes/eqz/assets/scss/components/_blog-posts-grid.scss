@@ -51,7 +51,7 @@
 
         &__info {
             @apply self-end
-                p-4;
+                py-4;
 
             @include a-underline;
         }

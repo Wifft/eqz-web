@@ -11950,7 +11950,8 @@ readers do not read off random characters that represent icons */
 .c-blog-posts-grid-post__info {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .c-blog-posts-grid-post__info a:hover {
   text-decoration-line: underline;
