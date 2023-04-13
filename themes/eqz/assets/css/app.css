@@ -509,8 +509,10 @@ h1,
   h4,
   h5,
   h6 {
-  word-break: break-all;
-}
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -11993,7 +11995,7 @@ readers do not read off random characters that represent icons */
 }
 @media (min-width: 1024px) {
   .c-highlighted-creators__container {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     -webkit-column-gap: 3rem;
        -moz-column-gap: 3rem;
             column-gap: 3rem;
