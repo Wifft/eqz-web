@@ -10,6 +10,7 @@ showExport: false
 primaryNavigation:
     label: Creadores
     icon: icon-users
+    url: js/tailorutils/sortableentries/creators_creator
     order: 311
 
 validation:
@@ -60,3 +61,10 @@ fields:
         type: 'switch'
         on: 'Sí'
         off: 'No'
+    sort_order:
+        label:  'Orden'
+        span: 'auto'
+        required: true
+        type: 'number'
+        hidden: true
+        default: 0

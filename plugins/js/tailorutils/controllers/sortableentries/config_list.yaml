@@ -1,0 +1,60 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Columns supplied dynamically
+list: []
+
+# Scopes supplied dynamically
+filter: []
+
+# Model Class name
+modelClass: JS\TailorUtils\Models\SortableEntryRecord
+
+# List Title
+title: Manage Entries
+
+# Link URL for each record
+recordUrl: js/tailorutils/sortableentries/:source_handle/:id
+
+# Message to display if the list is empty
+noRecordsMessage: backend::lang.list.no_records
+
+# Records to display per page
+recordsPerPage: 50
+
+# Display page numbers with pagination, disable to improve performance
+showPageNumbers: true
+
+# Displays the list column set up button
+showSetup: true
+
+# Expands the last column
+expandLastColumn: true
+
+# Displays the sorting link on each column
+showSorting: true
+
+# Default sorting column
+defaultSort:
+    column: sort_order
+    direction: desc
+
+# Display checkboxes next to each record
+showCheckboxes: true
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar
+
+    # Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt
+
+structure:
+    # Display reorder for each record
+    showTree: false
+    showReorder: true
+    showSorting: false
+    maxDepth: 1

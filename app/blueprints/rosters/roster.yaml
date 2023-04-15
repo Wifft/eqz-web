@@ -31,3 +31,10 @@ fields:
         type: 'fileupload'
         mode: 'image'
         useCaption: false
+    sort_order:
+        label:  'Orden'
+        span: 'auto'
+        required: true
+        type: 'number'
+        hidden: true
+        default: 0

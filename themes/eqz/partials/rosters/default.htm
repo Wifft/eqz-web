@@ -1,4 +1,4 @@
-{% for roster in rosters %}
+{% for roster in rosters.orderBy('sort_order', 'desc').get() %}
     <div id="{{ roster.slug }}"
         class="c-rosters__roster">
         <picture>
@@ -7,7 +7,7 @@
                 title="{{ roster.title }}"/>
         </picture>
         <div class="slick-slider">
-            {% for player in roster.members %}
+            {% for player in roster.members.sortByDesc('sort_order') %}
                 {% partial '@card' player = player only %}
             {% endfor %}
             {# Rellenamos huecos para evitar que la cosa se vea rara cuando hay menos de 6 #}

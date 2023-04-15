@@ -49,3 +49,17 @@ fields:
                     span: 'full'
                     required: true
                     type: 'text'
+    rosters:
+        label: 'Rosters'
+        span: 'right'
+        required: false
+        type: 'entries'
+        source: 'Rosters\Roster'
+        inverse: 'members'
+    sort_order:
+        label:  'Orden'
+        span: 'auto'
+        required: true
+        type: 'number'
+        hidden: true
+        default: 0
