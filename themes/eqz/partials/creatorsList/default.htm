@@ -1,3 +1,4 @@
+{% set creatorsList = creatorsList.orderBy('sort_order', 'asc').get() %}
 <div class="c-creators-list__grid">
     {% for creator in creatorsList %}
         {% partial '@card' creator = creator only %}

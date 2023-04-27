@@ -1,11 +1,13 @@
 <article class="c-profile-card c-profile-card--roster">
-    <div class="c-profile-card__image">
-        <picture>
-            <img src="{{ player.image[0].getThumb('auto','auto',{'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
-                alt="{{ player.title }}"
-                title="{{ player.title }}"/>
-        </picture>
-    </div>
+    {% if player.image|length > 0 %}
+        <div class="c-profile-card__image">
+            <picture>
+                <img src="{{ player.image[0].getThumb('auto','auto',{'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
+                    alt="{{ player.title }}"
+                    title="{{ player.title }}"/>
+            </picture>
+        </div>
+    {% endif %}
     <div class="c-profile-card__info">
         <h3 class="u-primary-text-shadow">
             {{ player.title }}

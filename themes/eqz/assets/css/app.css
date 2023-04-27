@@ -818,9 +818,6 @@ h1,
 .text-center {
   text-align: center;
 }
-.text-justify {
-  text-align: justify;
-}
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -12933,6 +12930,12 @@ readers do not read off random characters that represent icons */
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.c-about-us__info h1 {
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 3.75rem;
+  line-height: 1;
+}
 .c-about-us__info h2 {
   padding-bottom: 0.5rem;
   font-size: 2.25rem;
@@ -13222,6 +13225,63 @@ readers do not read off random characters that represent icons */
   color: #010519;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.c-legal-texts {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .c-legal-texts {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .c-legal-texts {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c-legal-texts {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .c-legal-texts {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .c-legal-texts {
+    max-width: 1536px;
+  }
+}
+
+.c-legal-texts {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.c-legal-texts h1 {
+  padding-bottom: 1rem;
+  text-align: center;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.c-legal-texts article {
+  text-align: justify;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.c-legal-texts article p:not(:last-child) {
+  padding-bottom: 16px;
 }
 .hover\:bg-primary:hover {
   --tw-bg-opacity: 1;

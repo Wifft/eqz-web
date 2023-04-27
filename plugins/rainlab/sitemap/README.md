@@ -1,3 +1,9 @@
+# RainLab Sitemap is no longer under active development
+
+Please note that the RainLab Sitemap plugin is no longer under active development. It has been superseded by a new form widget called [Page Finder](https://docs.octobercms.com/3.x/element/form/widget-pagefinder.html), which offers flexible support for defining sitemaps, including multisite support.
+
+- [Take me to the Upgrade Guide](./UPGRADE.md)
+
 # Sitemap generator plugin
 
 This plugin will a generate `sitemap.xml` file in October CMS based on desired CMS pages and others.
@@ -6,7 +12,9 @@ This plugin will a generate `sitemap.xml` file in October CMS based on desired C
 
 Once this plugin is installed and the sitemap has been configured. The sitemap can be viewed by accessing the file relative to the website base path. For example, if the website is hosted at https://octobercms.com it can be viewed by opening this URL:
 
-    https://octobercms.com/sitemap.xml
+```
+https://octobercms.com/sitemap.xml
+```
 
 ## Managing a sitemap definition
 
@@ -24,7 +32,7 @@ Items of this type are links to a specific fixed URL. That could be an URL of an
 Items of this type refer to static pages. The static page should be selected in the **Reference** drop-down list described below.
 
 ###### All static pages {.subheader}
-Items of this type expand to create links to all static pages defined in the theme. 
+Items of this type expand to create links to all static pages defined in the theme.
 
 #### Custom item types
 Other plugins can supply new item types. For example, the [Blog plugin](https://octobercms.com/plugin/rainlab-blog) by [RainLab](https://octobercms.com/author/RainLab) supplies two more types:

@@ -34,7 +34,7 @@
                     <div id="dropdownNavbar_rosters"
                         class="c-navbar-dropdown__content hidden">
                         <ul aria-labelledby="dropdownNavbarLink_rosters">
-                            {% for roster in rosters %}
+                            {% for roster in rosters.orderBy('sort_order', 'asc').get() %}
                                 <li>
                                     <a class="c-navbar-dropdown__link"
                                         href="{{ 'rosters'|page(false )}}#{{ roster.slug }}">
