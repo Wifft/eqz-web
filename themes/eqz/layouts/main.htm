@@ -3,6 +3,13 @@ is_priority = 1
 
 [contenteditor]
 
+[cookiesAdvice]
+locale = {{ activeLocale }}
+domain = ".equizers.com"
+timeout = 500
+expiration = 30
+statement = "/texto-legal/cookies"
+
 [collection rosters]
 handle = "Rosters\Roster"
 
@@ -67,5 +74,7 @@ function onStart() : void
             {% partial 'site/footer' only %}
         {% endif %}
         {% partial 'site/body-scripts' only %}
+
+        {% component 'cookiesAdvice' %}
     </body>
 </html>

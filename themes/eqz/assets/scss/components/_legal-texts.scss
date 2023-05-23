@@ -15,5 +15,17 @@
             text-justify;
 
         @include spaced-wysiwyg-p;
+        @include styled-ol;
+        @include styled-ul;
+
+        ol {
+            li {
+                ul {
+                    li {
+                        padding-left: 64px;
+                    }
+                }
+            }
+        }
     }
 }

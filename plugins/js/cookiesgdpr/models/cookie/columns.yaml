@@ -1,0 +1,25 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: js.cookiesgdpr::lang.fields.cookies.name
+        type: text
+        searchable: true
+        sortable: true
+    domain:
+        label: js.cookiesgdpr::lang.fields.cookies.domain
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: js.cookiesgdpr::lang.fields.cookies.description
+        type: text
+        searchable: true
+        sortable: true
+    duration:
+        label: js.cookiesgdpr::lang.fields.cookies.duration
+        type: text
+        searchable: true
+        sortable: true

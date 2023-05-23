@@ -1,0 +1,162 @@
+tabs:
+    fields:
+        params:
+            label: Parámetros
+            span: full
+            type: section
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        domain:
+            label: 'js.cookiesgdpr::lang.fields.domain'
+            commentAbove: 'js.cookiesgdpr::lang.fields.domain_description'
+            span: auto
+            type: text
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        cookies:
+            label: URL cookies
+            commentAbove: 'js.cookiesgdpr::lang.fields.cookies_page_desc'
+            span: auto
+            type: text
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        timeout:
+            label: 'js.cookiesgdpr::lang.fields.timeout'
+            span: auto
+            type: number
+            default: 50
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        expiration:
+            label: 'js.cookiesgdpr::lang.fields.expiration'
+            span: auto
+            default: 50
+            type: number
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        texts:
+            label: 'js.cookiesgdpr::lang.tabs.texts'
+            span: full
+            type: section
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        description:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.description'
+            span: full
+            type: textarea
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        readmore:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.readmore'
+            span: auto
+            type: text
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        settings:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.settings'
+            span: auto
+            type: text
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        accept:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.accept'
+            span: auto
+            type: text
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        reject:
+            label: 'Texto botón "Rechazar"'
+            span: auto
+            type: text
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        statement:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.statement'
+            span: auto
+            type: text
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        save:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.save'
+            span: auto
+            type: text
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        always_on:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.always_on'
+            span: auto
+            type: text
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        cookie_essential_title:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.cookie_essential_title'
+            span: full
+            type: text
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        cookie_essential_desc:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.cookie_essential_desc'
+            span: full
+            type: textarea
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        cookie_performance_title:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.cookie_performance_title'
+            span: full
+            type: text
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        cookie_performance_desc:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.cookie_performance_desc'
+            span: full
+            type: textarea
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        cookie_analytics_title:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.cookie_analytics_title'
+            span: full
+            type: text
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        cookie_analytics_desc:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.cookie_analytics_desc'
+            span: full
+            type: textarea
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        cookie_marketing_title:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.cookie_marketing_title'
+            span: full
+            type: text
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        cookie_marketing_desc:
+            label: 'js.cookiesgdpr::lang.fields.cookies_advise.cookie_marketing_desc'
+            span: full
+            type: textarea
+            tab: 'js.cookiesgdpr::lang.tabs.texts'
+        color_primary:
+            label: 'js.cookiesgdpr::lang.fields.color_primary'
+            type: colorpicker
+            span: auto
+            tab: 'js.cookiesgdpr::lang.tabs.colors'
+        color_background:
+            label: 'js.cookiesgdpr::lang.fields.color_background'
+            type: colorpicker
+            span: auto
+            tab: 'js.cookiesgdpr::lang.tabs.colors'
+        color_text:
+            label: 'js.cookiesgdpr::lang.fields.color_text'
+            type: colorpicker
+            span: auto
+            tab: 'js.cookiesgdpr::lang.tabs.colors'
+        color_link:
+            label: 'js.cookiesgdpr::lang.fields.color_link'
+            type: colorpicker
+            span: auto
+            tab: 'js.cookiesgdpr::lang.tabs.colors'
+        color_modal_bg:
+            label: 'Color fondo modal'
+            type: colorpicker
+            span: auto
+            tab: 'js.cookiesgdpr::lang.tabs.colors'
+        color_modal_title:
+            label: 'js.cookiesgdpr::lang.fields.color_modal_title'
+            type: colorpicker
+            span: auto
+            tab: 'js.cookiesgdpr::lang.tabs.colors'
+        color_modal_text:
+            label: 'js.cookiesgdpr::lang.fields.color_modal_text'
+            type: colorpicker
+            span: auto
+            tab: 'js.cookiesgdpr::lang.tabs.colors'
+        color_modal_footer:
+            label: 'js.cookiesgdpr::lang.fields.color_modal_footer'
+            type: colorpicker
+            span: auto
+            tab: 'js.cookiesgdpr::lang.tabs.colors'
+        color_modal_icon:
+            label: 'js.cookiesgdpr::lang.fields.color_modal_icon'
+            type: colorpicker
+            span: auto
+            tab: 'js.cookiesgdpr::lang.tabs.colors'
+

@@ -1,0 +1,39 @@
+<?php namespace JS\CookiesGdpr\Controllers;
+
+use BackendMenu;
+use Backend\Classes\Controller;
+
+/**
+ * Cookies Back-end Controller
+ */
+class Cookies extends Controller
+{
+    /**
+     * @var array Behaviors that are implemented by this controller.
+     */
+    public $implement = [
+        'Backend.Behaviors.FormController',
+        'Backend.Behaviors.ListController'
+    ];
+
+    /**
+     * @var string Configuration file for the `FormController` behavior.
+     */
+    public $formConfig = 'config_form.yaml';
+
+    /**
+     * @var string Configuration file for the `ListController` behavior.
+     */
+    public $listConfig = 'config_list.yaml';
+
+    public $requiredPermissions = [
+        'js_manage_cookies'
+    ];
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        BackendMenu::setContext('js.CookiesGdpr', 'gdpr', 'gdpr.cookies');
+    }
+}

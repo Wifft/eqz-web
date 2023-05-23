@@ -1,0 +1,41 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    is_active:
+        label: 'Activar'
+        span: auto
+        type: switch
+        on: 'Sí'
+        off: 'No'
+
+    name:
+        label: js.cookiesgdpr::lang.fields.cookies.name
+        span: auto
+        type: text
+
+    type:
+        label: js.cookiesgdpr::lang.fields.cookies.cookie_type
+        span: auto
+        nameFrom: name
+        descriptionFrom: description
+        type: relation
+
+    domain:
+        label: js.cookiesgdpr::lang.fields.cookies.domain
+        span: auto
+        type: text
+
+    duration:
+        label: js.cookiesgdpr::lang.fields.cookies.duration
+        span: auto
+        type: text
+
+    description:
+        label: js.cookiesgdpr::lang.fields.cookies.description
+        span: full
+        type: textarea
+
+

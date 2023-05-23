@@ -1,0 +1,10 @@
+columns:
+    legal_terms:
+        label: legal_terms
+        type: text
+    cookies_policy:
+        label: cookies_policy
+        type: text
+    privacity_policy:
+        label: privacity_policy
+        type: text

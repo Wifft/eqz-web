@@ -13,3 +13,15 @@
         }
     }
 }
+
+@mixin styled-ol {
+    ol > li {
+        @apply list-decimal list-inside pb-3;
+    }
+}
+
+@mixin styled-ul {
+    ul > li {
+        @apply list-disc list-inside pb-3;
+    }
+}

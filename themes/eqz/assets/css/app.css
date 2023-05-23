@@ -12264,6 +12264,16 @@ readers do not read off random characters that represent icons */
     display: block;
   }
 }
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .c-youtube-videos-list-video .c-btn--rounded {
+    left: 196px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .c-youtube-videos-list-video .c-btn--rounded {
+    left: 140px;
+  }
+}
 .c-youtube-videos-list-video__image {
   display: block;
 }
@@ -13282,6 +13292,19 @@ readers do not read off random characters that represent icons */
 }
 .c-legal-texts article p:not(:last-child) {
   padding-bottom: 16px;
+}
+.c-legal-texts article ol > li {
+  list-style-position: inside;
+  list-style-type: decimal;
+  padding-bottom: 0.75rem;
+}
+.c-legal-texts article ul > li {
+  list-style-position: inside;
+  list-style-type: disc;
+  padding-bottom: 0.75rem;
+}
+.c-legal-texts article ol li ul li {
+  padding-left: 64px;
 }
 .hover\:bg-primary:hover {
   --tw-bg-opacity: 1;

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Cookie Type
+
+# Model Form Field configuration
+form: $/js/cookiesgdpr/models/cookietype/fields.yaml
+
+# Model Class name
+modelClass: JS\CookiesGdpr\Models\CookieType
+
+# Default redirect location
+defaultRedirect: js/cookiesgdpr/cookietypes
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: js/cookiesgdpr/cookietypes/update/:id
+    redirectClose: js/cookiesgdpr/cookietypes
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: js/cookiesgdpr/cookietypes
+    redirectClose: js/cookiesgdpr/cookietypes
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

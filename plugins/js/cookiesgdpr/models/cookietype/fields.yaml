@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: js.cookiesgdpr::lang.fields.cookies_types.name
+        span: auto
+        type: text
+    description:
+        label: js.cookiesgdpr::lang.fields.cookies_types.description
+        span: full
+        type: textarea

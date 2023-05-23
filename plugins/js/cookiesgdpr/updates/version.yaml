@@ -1,0 +1,23 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table js_gdpr_cookie_types_table'
+    - builder_table_create_js_gdpr_cookie_types_table.php
+1.0.3:
+    - 'Created table js_gdpr_cookie_advice_texts_table'
+    - builder_table_create_js_gdpr_cookie_advice_texts_table.php
+1.0.4:
+    - 'Created table js_gdpr_cookies_table'
+    - builder_table_create_js_gdpr_cookies_table.php
+1.0.5:
+    - 'Seeded table js_gdpr_cookie_types_table'
+    - builder_table_seed_js_gdpr_cookie_types_table.php
+1.0.6:
+    - 'Created table js_gdpr_legals'
+    - builder_table_create_js_gdpr_legals.php
+1.0.7:
+    - 'Seeded table js_gdpr_legals'
+    - builder_table_seeder_js_gdpr_legals.php
+1.0.8:
+    - 'Seeded table js_gdpr_cookie_advice_settings_table'
+    - builder_table_seed_js_gdpr_cookie_advice_settings_table.php

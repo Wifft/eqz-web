@@ -36,6 +36,14 @@
             @screen lg {
                 @apply block;
             }
+
+            @include breakpoint(1280px, 1535px) {
+                left: 196px;
+            }
+
+            @include breakpoint(1024px, 1280px) {
+                left: 140px;
+            }
         }
 
         &__image {

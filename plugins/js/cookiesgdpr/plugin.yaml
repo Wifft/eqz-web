@@ -1,0 +1,47 @@
+plugin:
+    name: 'js.cookiesgdpr::lang.plugin.name'
+    description: 'js.cookiesgdpr::lang.plugin.description'
+    author: RW
+    icon: icon-legal
+    homepage: 'https://www.refineriaweb.com'
+permissions:
+    js_manage_cookies:
+        tab: 'js.cookiesgdpr::lang.plugin.name'
+        label: 'js.cookiesgdpr::lang.permissions.js_manage_cookies'
+    js_manage_cookies_types:
+        tab: 'js.cookiesgdpr::lang.plugin.name'
+        label: 'js.cookiesgdpr::lang.permissions.js_manage_cookies_types'
+    js_manage_cookie_advise:
+        tab: 'js.cookiesgdpr::lang.plugin.name'
+        label: 'js.cookiesgdpr::lang.permissions.js_manage_cookie_advise'
+    js_manage_legal_pages:
+        tab: 'js.cookiesgdpr::lang.plugin.name'
+        label: 'js.cookiesgdpr::lang.permissions.js_manage_legal_pages'
+navigation:
+    gdpr:
+        label: 'js.cookiesgdpr::lang.plugin.name'
+        url: js/cookiesgdpr/cookies
+        icon: icon-legal
+        order: '301'
+        sideMenu:
+            gdpr.cookies:
+                label: 'js.cookiesgdpr::lang.permissions.js_manage_cookies'
+                url: js/cookiesgdpr/cookies
+                icon: icon-bug
+                iconSvg: ''
+            gdpr.types:
+                label: 'js.cookiesgdpr::lang.pages.cookies_types'
+                url: js/cookiesgdpr/cookietypes
+                icon: icon-tag
+            # gdpr.advices:
+            #     label: 'js.cookiesgdpr::lang.permissions.js_manage_cookie_advise'
+            #     url: js/cookiesgdpr/cookieadvices/update/1
+            #     icon: icon-exclamation-circle
+            gdpr.legal:
+                label: 'js.cookiesgdpr::lang.permissions.js_manage_legal_pages'
+                url: js/cookiesgdpr/legals/update/1
+                icon: icon-file
+            gdpr.settings:
+                label: 'js.cookiesgdpr::lang.permissions.js_manage_settings'
+                url: js/cookiesgdpr/cookieadvicesettings/update
+                icon: icon-sliders

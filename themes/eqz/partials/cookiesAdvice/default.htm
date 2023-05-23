@@ -1,0 +1,29 @@
+<script>
+	gdprCookieNotice({
+		locale: "{{ activeLocale ?? 'es' }}",
+		localeStrings: {{ cookies_advice_text| raw }},
+		timeout: {{ adviceSettings.timeout ?? 500 }},
+		expiration: {{ adviceSettings.expiration ?? 30 }},
+		domain: "{{ adviceDomain }}",
+		statement: "{{ adviceSettings.cookies ?? '/cookies' }}",
+
+		performance: {{ performance_cookies| raw }},
+		analytics: {{ analytics_cookies| raw }},
+		marketing: {{ marketing_cookies| raw }}
+	});
+</script>
+
+<style>
+	:root {
+		--gdpr-colors-primary: {{ adviceSettings.color_primary }};
+		--gdpr-colors-bg: {{ adviceSettings.color_background }};
+		--gdpr-colors-text: {{ adviceSettings.color_text }};
+		--gdpr-colors-link: {{ adviceSettings.color_link }};
+		--gdpr-colors-modal-overlay: rgba(0, 0, 0, 0.4);
+		--gdpr-colors-modal-bg: {{ adviceSettings.color_modal_bg }};
+		--gdpr-colors-modal-footer: {{ adviceSettings.color_modal_footer }};
+		--gdpr-colors-modal-title: {{ adviceSettings.color_modal_title }};
+		--gdpr-colors-modal-text: {{ adviceSettings.color_modal_text }};
+		--gdpr-colors-modal-icon: {{ adviceSettings.color_modal_icon }};
+	}
+</style>
