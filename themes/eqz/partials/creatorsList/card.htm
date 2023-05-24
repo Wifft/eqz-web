@@ -2,7 +2,7 @@
     <div class="c-profile-card__image">
         <a href="{{ 'creators/profile'|page({'slug': creator.slug}) }}">
             <picture>
-                <img src="{{ creator.image[0].getThumb(368, 368, {'mode':'crop', 'quality':65, 'extension':'webp'}) }}"
+                <img src="{{ creator.image[0].getThumb('auto', 'auto', {'mode':'crop', 'quality':65, 'extension':'webp'}) }}"
                     alt="{{ creator.nickname }}"
                     title="{{ creator.nickname }}"/>
             </picture>

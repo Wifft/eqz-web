@@ -22,7 +22,10 @@
 
     &__image {
         img {
-            @apply w-full;
+            max-width: 696px;
+            max-height: 759px;
+
+            @apply object-cover w-full;
         }
     }
 

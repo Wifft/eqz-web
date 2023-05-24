@@ -6,7 +6,7 @@
     <div class="c-creators-profile__grid">
         <div class="c-creators-profile__image">
             <picture>
-                <img src="{{ creator.image[0].getThumb(720, 720, {'mode':'auto', 'quality':65, 'extension':'webp'}) }}"
+                <img src="{{ creator.image[0].getThumb('auto', 'auto', {'mode':'auto', 'quality':99, 'extension':'webp'}) }}"
                     alt="{{ creator.nickname }}"
                     title="{{ creator.nickname }}"/>
             </picture>
