@@ -8,3 +8,7 @@
 @import "mixins/mixins";
 @import "utilities/utilities";
 @import "components/components";
+
+.gdpr-cookie-notice-modal-footer-item-btn {
+    color:  var(--gdpr-colors-modal-text) !important;
+}

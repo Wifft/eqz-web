@@ -36,5 +36,5 @@ fields:
         span: 'auto'
         required: true
         type: 'number'
-        hidden: true
+        hidden: false
         default: 0

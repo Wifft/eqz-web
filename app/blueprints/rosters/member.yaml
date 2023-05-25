@@ -31,6 +31,7 @@ fields:
         type: 'fileupload'
         mode: 'image'
         useCaption: false
+        commentAbove: 'Tamaño de imagen OBLIGATORIO -> 512x512 píxeles.'
     socials:
         label: 'Redes sociales'
         span: 'left'

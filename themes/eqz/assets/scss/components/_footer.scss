@@ -53,7 +53,7 @@
                 }
             }
 
-            &:last-child {
+            &.divider {
                 @screen md {
                     @apply border-l-2
                         border-l-white;

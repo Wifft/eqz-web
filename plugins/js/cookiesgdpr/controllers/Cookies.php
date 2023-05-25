@@ -34,6 +34,6 @@ class Cookies extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('js.CookiesGdpr', 'gdpr', 'gdpr.cookies');
+        BackendMenu::setContext('JS.CookiesGdpr', 'gdpr', 'gdpr.cookies');
     }
 }

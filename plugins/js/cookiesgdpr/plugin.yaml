@@ -1,9 +1,9 @@
 plugin:
     name: 'js.cookiesgdpr::lang.plugin.name'
     description: 'js.cookiesgdpr::lang.plugin.description'
-    author: RW
+    author: JS
     icon: icon-legal
-    homepage: 'https://www.refineriaweb.com'
+    homepage: 'https://www.josepsalva.name'
 permissions:
     js_manage_cookies:
         tab: 'js.cookiesgdpr::lang.plugin.name'
@@ -33,14 +33,6 @@ navigation:
                 label: 'js.cookiesgdpr::lang.pages.cookies_types'
                 url: js/cookiesgdpr/cookietypes
                 icon: icon-tag
-            # gdpr.advices:
-            #     label: 'js.cookiesgdpr::lang.permissions.js_manage_cookie_advise'
-            #     url: js/cookiesgdpr/cookieadvices/update/1
-            #     icon: icon-exclamation-circle
-            gdpr.legal:
-                label: 'js.cookiesgdpr::lang.permissions.js_manage_legal_pages'
-                url: js/cookiesgdpr/legals/update/1
-                icon: icon-file
             gdpr.settings:
                 label: 'js.cookiesgdpr::lang.permissions.js_manage_settings'
                 url: js/cookiesgdpr/cookieadvicesettings/update

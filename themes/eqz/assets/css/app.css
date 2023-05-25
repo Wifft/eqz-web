@@ -11659,7 +11659,7 @@ readers do not read off random characters that represent icons */
   .c-footer-brands__item a img {
     margin: 0px;
   }
-  .c-footer-brands__item:last-child {
+  .c-footer-brands__item.divider {
     border-left-width: 2px;
     --tw-border-opacity: 1;
     border-left-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -13315,17 +13315,25 @@ readers do not read off random characters that represent icons */
 .c-legal-texts article ol li ul li {
   padding-left: 64px;
 }
+
+.gdpr-cookie-notice-modal-footer-item-btn {
+  color: var(--gdpr-colors-modal-text) !important;
+}
+
 .hover\:bg-primary:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(1 5 25 / var(--tw-bg-opacity));
 }
+
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
+
 @media (min-width: 1024px) {
   .lg\:mx-0 {
     margin-left: 0px;

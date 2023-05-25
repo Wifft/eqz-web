@@ -16,7 +16,7 @@ fields:
         label: 'Enlace'
         span: 'left'
         required: true
-        type: 'text' 
+        type: 'text'
     image:
         label: 'Imagen'
         span: 'right'
@@ -24,3 +24,17 @@ fields:
         type: 'fileupload'
         mode: 'image'
         useCaption: false
+    is_separator:
+        label: 'Separador?'
+        span: 'left'
+        required: false
+        type: 'switch'
+        on: 'Sí'
+        off: 'No'
+    sort_order:
+        label:  'Orden'
+        span: 'auto'
+        required: true
+        type: 'number'
+        hidden: false
+        default: 0

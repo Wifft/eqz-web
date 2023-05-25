@@ -34,6 +34,6 @@ class CookieTypes extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('js.CookiesGdpr', 'gdpr', 'gdpr.types');
+        BackendMenu::setContext('JS.CookiesGdpr', 'gdpr', 'gdpr.types');
     }
 }

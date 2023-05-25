@@ -1,8 +1,8 @@
 <footer class="c-footer">
     <div class="c-footer-brands__container--flex">
         <div class="c-footer-brands__container--grid">
-            {% for idx,brand in brands %}
-                <picture class="c-footer-brands__item">
+            {% for brand in brands.orderBy('sort_order', 'asc').get() %}
+                <picture class="c-footer-brands__item {{ brand.is_separator ? 'divider' : null }}">
                     <a href="{{ brand.url }}"
                         target="_blank"
                         rel="external noopener noreferrer">

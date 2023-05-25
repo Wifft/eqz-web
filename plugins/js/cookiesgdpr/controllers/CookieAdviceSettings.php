@@ -18,14 +18,14 @@ class CookieAdviceSettings extends \System\Controllers\Settings
     {
         parent::__construct();
 
-        BackendMenu::setContext('js.CookiesGdpr', 'gdpr', 'gdpr.settings');
+        BackendMenu::setContext('JS.CookiesGdpr', 'gdpr', 'gdpr.settings');
     }
 
     //
     // Generated Form
     //
 
-    public function update($author = 'RW', $plugin = 'CookiesGdpr', $code = 'cookieadvicesettings')
+    public function update($author = 'JS', $plugin = 'CookiesGdpr', $code = 'cookieadvicesettings')
     {
         SettingsManager::setContext($author.'.'.$plugin, $code);
 
@@ -46,7 +46,7 @@ class CookieAdviceSettings extends \System\Controllers\Settings
         }
     }
 
-    public function update_onSave($author = 'RW', $plugin = 'CookiesGdpr', $code = 'cookieadvicesettings')
+    public function update_onSave($author = 'JS', $plugin = 'CookiesGdpr', $code = 'cookieadvicesettings')
     {
         $item = $this->findSettingItem($author, $plugin, $code);
         $model = $this->createModel($item);
