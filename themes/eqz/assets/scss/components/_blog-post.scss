@@ -13,7 +13,9 @@
             gap-4;
 
         @screen lg {
-            grid-template-columns: 70% 30%;
+            &:not(.c-blog-post__layout--entre-tu-y-yo) {
+                grid-template-columns: 70% 30%;
+            }
         }
     }
 

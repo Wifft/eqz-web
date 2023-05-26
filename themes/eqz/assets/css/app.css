@@ -12558,7 +12558,7 @@ readers do not read off random characters that represent icons */
   gap: 1rem;
 }
 @media (min-width: 1024px) {
-  .c-blog-post__layout {
+  .c-blog-post__layout:not(.c-blog-post__layout--entre-tu-y-yo) {
     grid-template-columns: 70% 30%;
   }
 }

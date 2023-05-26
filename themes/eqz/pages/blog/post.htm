@@ -17,15 +17,19 @@ function onEnd() : void
 {
     $this->page->title = $this->page->components['blogPost']->post->title;
     $this->page->meta_description = strip_tags(html_entity_decode($this->page->components['blogPost']->post->summary));
+
+    $this['isEntreTuYyo'] = $this->page->components['blogPost']->post->categories->first()?->slug === 'entre-tu-y-yo';
 }
 ==
 <section id="blogPosts_page"
     class="c-blog-post">
-    <div class="c-blog-post__layout">
+    <div class="c-blog-post__layout c-blog-post__layout--entre-tu-y-yo">
         {% component 'blogPost' %}
-        <div>
-            {% component 'blogCategories' %}
-            {% component 'blogLastPosts' %}
-        </div>
+        {% if isEntreTuYyo == false %}
+            <div>
+                {% component 'blogCategories' %}
+                {% component 'blogLastPosts' %}
+            </div>
+        {% endif %}
     </div>
 </section>

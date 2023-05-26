@@ -17,7 +17,7 @@
             class="c-navbar-dropdown hidden">
             <ul>
                 <li>
-                    <a class="c-navbar__link {{ viewBag.activeMenu is same as('blog') ? 'text-white' : 'text-gray-400' }}"
+                    <a class="c-navbar__link {{ viewBag.activeMenu is same as('blog') and isEntreTuYyo == false ? 'text-white' : 'text-gray-400' }}"
                         href="{{ 'blog/posts'|page({'page':1}) }}"
                         aria-current="page">
                         Noticias
@@ -58,7 +58,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="c-navbar__link text-gray-400"
+                    <a class="c-navbar__link {{ isEntreTuYyo ? 'text-white' : 'text-gray-400' }}"
                         href="{{ 'blog/category'|page({'slug':'entre-tu-y-yo'}) }}"
                         rel="external noopener noreferrer"
                         aria-current="page">

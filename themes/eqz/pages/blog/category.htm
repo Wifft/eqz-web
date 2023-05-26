@@ -20,6 +20,8 @@ function onStart() : void
     }
     $this->page->title = $category->name;
     $this->page->meta_description = $category->description;
+
+    $this['isEntreTuYyo'] = $this->param('slug') === 'entre-tu-y-yo';
 }
 ==
 <section id="blogPosts_page"

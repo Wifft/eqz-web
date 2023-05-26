@@ -1,13 +1,15 @@
 {% for category in categories %}
-    <li>
-        <a class="hover:underline"
-            href="{{ category.url }}">
-            {{ category.name }}
-        </a>
-        {% if category.children|length > 0 %}
-            <ul>
-                {% partial '@items' categories = category.children only %}
-            </ul>
-        {% endif %}
-    </li>
+    {% if category.slug is not same as('entre-tu-y-yo') %}
+        <li>
+            <a class="hover:underline"
+                href="{{ category.url }}">
+                {{ category.name }}
+            </a>
+            {% if category.children|length > 0 %}
+                <ul>
+                    {% partial '@items' categories = category.children only %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endif %}
 {% endfor %}
