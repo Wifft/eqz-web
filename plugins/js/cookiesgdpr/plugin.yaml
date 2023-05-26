@@ -22,7 +22,7 @@ navigation:
         label: 'js.cookiesgdpr::lang.plugin.name'
         url: js/cookiesgdpr/cookies
         icon: icon-legal
-        order: '301'
+        order: '401'
         sideMenu:
             gdpr.cookies:
                 label: 'js.cookiesgdpr::lang.permissions.js_manage_cookies'

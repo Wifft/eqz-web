@@ -29,7 +29,7 @@
     </div>
     <div class="c-footer__legal-texts">
         <ul>
-            {% for legalText in legalTexts %}
+            {% for legalText in legalTexts.orderBy('sort_order', 'asc').get() %}
                 <li>
                     <a href="{{ 'legal-text'|page({'slug': legalText.slug}) }}">
                         {{ legalText.title }}

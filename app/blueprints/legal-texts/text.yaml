@@ -17,3 +17,10 @@ fields:
         required: true
         span: 'adaptive'
         size: 'huge'
+    sort_order:
+        label:  'Orden'
+        span: 'auto'
+        required: true
+        type: 'number'
+        hidden: false
+        default: 0

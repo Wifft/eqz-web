@@ -9,6 +9,12 @@ handle = "LegalTexts\Text"
 entrySlug = "{{ :slug }}"
 entryColumn = "slug"
 ==
+function onEnd() : void
+{
+    $this->page->title = $this->page->components['legalText']->getPrimaryRecord()->title;
+    $this->page->meta_description = str_limit(strip_tags(html_entity_decode($this->page->components['legalText']->getPrimaryRecord()->description)), 64, '...');
+}
+==
 <section id="legalText_page"
     class="c-legal-texts">
     <h1>{{ legalText.title }}</h1>
