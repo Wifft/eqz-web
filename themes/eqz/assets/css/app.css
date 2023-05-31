@@ -11638,17 +11638,17 @@ readers do not read off random characters that represent icons */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .c-footer-brands__item {
   height: 100%;
 }
 .c-footer-brands__item a {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
   display: block;
 }
 .c-footer-brands__item a img {
@@ -11663,6 +11663,9 @@ readers do not read off random characters that represent icons */
     border-left-width: 2px;
     --tw-border-opacity: 1;
     border-left-color: rgb(255 255 255 / var(--tw-border-opacity));
+  }
+  .c-footer-brands__item.divider a {
+    margin-left: 1rem;
   }
 }
 .c-footer__white-line {

@@ -20,9 +20,14 @@ fields:
         type: 'fileupload'
         mode: 'image'
         useCaption: false
-    rosters:
-        label: 'Rosters'
+    game:
+        label: 'Juego'
         span: 'left'
         required: true
-        type: 'entries'
-        source: 'Rosters\Roster'
+        type: 'dropdown'
+        options:
+            - 'FIFA'
+            - 'Rocket League'
+            - 'Valorant'
+            - 'Brawl Stars'
+

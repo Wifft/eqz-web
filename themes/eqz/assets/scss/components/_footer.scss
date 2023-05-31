@@ -24,14 +24,14 @@
             &--grid {
                 @apply grid
                     grid-cols-1
+                    gap-4
                     self-center
-                    text-center
-                    gap-4;
+                    text-center;
 
                 @screen md {
-                    @apply grid-cols-3
-                        flex
-                        flex-wrap;
+                    @apply flex
+                        flex-wrap
+                        justify-center;
                 }
             }
         }
@@ -40,8 +40,7 @@
             @apply h-full;
 
             a {
-                @apply block
-                    mx-6;
+                @apply block;
 
                 img {
                     @apply h-16
@@ -57,6 +56,9 @@
                 @screen md {
                     @apply border-l-2
                         border-l-white;
+                    a {
+                        @apply ml-4;
+                    }
                 }
             }
         }

@@ -23,7 +23,7 @@ function onEnd() : void
 ==
 <section id="blogPosts_page"
     class="c-blog-post">
-    <div class="c-blog-post__layout c-blog-post__layout--entre-tu-y-yo">
+    <div class="c-blog-post__layout {{ isEntreTuYyo ? 'c-blog-post__layout--entre-tu-y-yo' : null }}">
         {% component 'blogPost' %}
         {% if isEntreTuYyo == false %}
             <div>
