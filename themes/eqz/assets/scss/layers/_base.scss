@@ -2,6 +2,7 @@
     @font-face {
         font-family: 'Pilat Extended';
         src: url('/themes/eqz/assets/fonts/pilat_extended.ttf') format('truetype');
+        font-display: swap;
     }
 
     * {
@@ -9,12 +10,18 @@
     }
 
     body {
-        @apply flex
+        @apply bg-black
+            flex
             flex-col
-            min-h-screen
-            bg-cover
-            bg-center
-            bg-fixed;
+            min-h-screen;
+
+        @screen lg {
+            background-image: url('/themes/eqz/assets/img/body_bg.webp');
+
+            @apply bg-cover
+                bg-center
+                bg-fixed;
+        }
     }
 
     h1,

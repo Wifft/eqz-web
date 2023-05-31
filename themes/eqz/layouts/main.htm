@@ -44,6 +44,8 @@ function onStart() : void
                 content="{{ this.page.title  ~ ' | ' ~ env('APP_NAME') }}"/>
             <meta name="og:description"
                 content="{{ this.page.meta_description }}"/>
+            <meta property="og:image"
+                content="{{ 'assets/img/eqz_og_logo.webp'|theme }}"/>
             {% partial 'site/twitter-og-metas' only %}
             <meta property="author"
                 content="Wifft"/>
@@ -58,7 +60,7 @@ function onStart() : void
         {% endif %}
         {% partial 'site/head-styles' only %}
     </head>
-    <body style="background-image: url('{{ 'assets/img/body_bg.webp'|theme }}');">
+    <body>
         {% if not maintenanceMode %}
             {% flash %}
                 <div class="alert alert-{{ type }}">

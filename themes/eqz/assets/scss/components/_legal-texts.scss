@@ -1,8 +1,10 @@
 .c-legal-texts {
     @apply container
+        text-white
         mx-auto
         my-4
-        text-white;
+        p-4
+        pt-0;
 
     h1 {
         @apply text-4xl
@@ -27,5 +29,9 @@
                 }
             }
         }
+    }
+
+    @screen lg {
+        @apply p-0;
     }
 }

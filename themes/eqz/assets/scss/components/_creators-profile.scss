@@ -30,7 +30,9 @@
     }
 
     &__info {
-        @apply text-white;
+        @apply text-white
+            m-4
+            mt-0;
 
         h1 {
             @apply text-4xl
@@ -48,6 +50,10 @@
 
                 @include spaced-wysiwyg-p;
             }
+        }
+
+        @screen lg {
+            @apply m-0;
         }
     }
 

@@ -10,9 +10,9 @@
                     alt="{{ creator.nickname }}"
                     title="{{ creator.nickname }}"/>
             </picture>
-            {% partial 'share-buttons' title = creator.nickname page = ''|page only %}
         </div>
         <div class="c-creators-profile__info">
+            {% partial 'share-buttons' title = creator.nickname page = ''|page only %}
             <h1>{{ creator.nickname }}</h1>
             <div class="my-2">
                 <h2>{{ creator.title }}</h2>

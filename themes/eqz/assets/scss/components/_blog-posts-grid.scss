@@ -10,12 +10,12 @@
     }
 
     &__rows {
-        @apply grid
-            grid-rows-1
-            gap-4;
+        @apply hidden;
 
         @screen lg {
-            @apply grid-rows-2;
+            @apply grid
+                gap-4
+                grid-rows-2;
         }
     }
 
