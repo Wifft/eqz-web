@@ -6,7 +6,7 @@
     type="text/css"/>
 
 {# Apaño hasta que los devs del CMS arreglen el placeholder 'styles' #}
-{% if this.page.baseFileName is same as("rosters") %}
+{% if this.page.baseFileName is same as("rosters") or this.page.baseFileName is same as("about") %}
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
         type="text/css"/>

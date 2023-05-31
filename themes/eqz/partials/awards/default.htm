@@ -1,6 +1,8 @@
+{% set games = ["FIFA", "Rocket League", "Valorant", "Brawl Stars"] %}
+
 <div class="c-awards__container">
     <h2 class="c-awards__title">Logros deportivos</h2>
-    <div class="c-awards__grid">
+    <div class="slick-slider">
         {% for award in awards %}
             <article class="c-awards__item">
                 <picture>
@@ -8,15 +10,10 @@
                         alt="{{ award.title }}"
                         title="{{ award.title }}"/>
                 </picture>
-                <h3>{{ award.title }}</h3>
-                <p>
-                    {% for roster in award.rosters %}
-                        {{ roster.title }}
-                        {% if not loop.index is same as(award.rosters|length) %}
-                            &comma;&nbsp;
-                        {% endif %}
-                    {% endfor %}
-                </p>
+                <h3 title="{{ award.title }}">
+                    {{ str_limit(award.title, 17, '...') }}
+                </h3>
+                <p>{{ games[award.game] }}</p>
             </article>
         {% endfor %}
     </div>

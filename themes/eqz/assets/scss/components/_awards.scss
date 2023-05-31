@@ -1,5 +1,5 @@
 .c-awards {
-    background-color: theme('colors.primary--translucent');
+    background-color: theme('colors.whitesmoke--translucent');
 
     &__container {
         @apply container
@@ -8,33 +8,24 @@
     }
 
     &__title {
-        @apply text-3xl
+        @apply text-4xl
+            text-primary
             text-center
-            text-white
             font-bold
             uppercase
             py-8;
     }
 
-    &__grid {
-        @apply flex
-            flex-wrap
-            items-center
-            justify-center
-            text-sm
-            text-white
-            uppercase;
-    }
-
     &__item {
-        @apply text-center;
+        @apply text-center
+            text-primary;
 
         img {
             @apply mx-auto;
         }
 
         h3 {
-            @apply text-2xl
+            @apply text-xl
                 font-bold;
         }
 

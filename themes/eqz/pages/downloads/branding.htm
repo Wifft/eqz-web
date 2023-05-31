@@ -1,19 +1,13 @@
 url = "/descargas/branding"
 layout = "main"
 title = "Branding"
-is_hidden = 0
+is_hidden = 1
 meta_description = "Descarga nuestro branding."
-
-[section branding]
-handle = "Branding\Eqz"
-entrySlug = 1
-entryColumn = "id"
-
-[viewBag]
-activeMenu = "downloads"
-activeSubmenu = "branding"
 ==
-<section id="branding_page"
+{% do abort(404) %}
+
+{# PÁGINA DESACTIVADA HASTA NUEVO AVISO #}
+{# <section id="branding_page"
     class="c-branding">
     <div class="c-branding__container">
         <h1 class="c-branding__title">Descarga elementos corporativos</h1>
@@ -21,4 +15,4 @@ activeSubmenu = "branding"
         <hr/>
         {% component 'branding' %}
     </div>
-</section>
+</section> #}
