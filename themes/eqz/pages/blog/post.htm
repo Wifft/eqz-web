@@ -1,18 +1,29 @@
-title = "Post"
 url = "/blog/post/:slug"
 layout = "main"
+title = "Post"
 is_hidden = 0
 
 [blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
 
 [blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
 
 [blogPosts blogLastPosts]
-postsPerPage=5
+pageNumber = "{{ :page }}"
+postsPerPage = 5
+noPostsMessage = "No se encontraron publicaciones."
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
 
 [viewBag]
 activeMenu = "blog"
 ==
+<?php
 function onEnd() : void
 {
     $this->page->title = $this->page->components['blogPost']->post->title;
@@ -20,6 +31,7 @@ function onEnd() : void
 
     $this['isEntreTuYyo'] = $this->page->components['blogPost']->post->categories->first()?->slug === 'entre-tu-y-yo';
 }
+?>
 ==
 <section id="blogPosts_page"
     class="c-blog-post">

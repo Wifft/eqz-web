@@ -16,7 +16,7 @@ fields:
         label: 'Enlace'
         span: 'left'
         required: true
-        type: 'text'
+        type: 'text' 
     image:
         label: 'Imagen'
         span: 'right'
