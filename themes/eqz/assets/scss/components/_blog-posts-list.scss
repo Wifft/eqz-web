@@ -19,7 +19,8 @@
                 max-w-sm
                 gap-3
                 mx-auto
-                shadow-xl;
+                shadow-xl
+                backdrop-blur-sm;
 
             @screen lg {
                 @apply max-w-full
@@ -105,7 +106,8 @@
                 background-color: theme('colors.primary--translucent');
 
                 @apply p-4
-                    mr-4;
+                    mr-4
+                    backdrop-blur-sm;
             }
         }
     }

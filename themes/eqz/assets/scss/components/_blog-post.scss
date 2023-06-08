@@ -23,7 +23,8 @@
         background-color: theme('colors.secondary--translucent');
 
         @apply p-4
-            shadow-xl;
+            shadow-xl
+            backdrop-blur-sm;
     }
 
     &-content {

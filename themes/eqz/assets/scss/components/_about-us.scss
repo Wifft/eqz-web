@@ -3,7 +3,8 @@
 
     &__container {
         @apply container
-            mx-auto;
+            mx-auto
+            backdrop-blur-sm;
     }
 
     &__grid {
