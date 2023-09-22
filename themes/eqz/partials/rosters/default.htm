@@ -7,7 +7,7 @@
                 title="{{ roster.title }}"/>
         </picture>
         <div class="slick-slider">
-            {% for player in roster.members.sortBy('sort_order') %}
+            {% for player in roster.members.where('is_enabled', true).sortBy('sort_order') %}
                 {% partial '@card' player = player only %}
             {% endfor %}
             {# Rellenamos huecos para evitar que la cosa se vea rara cuando hay menos de 6 #}
