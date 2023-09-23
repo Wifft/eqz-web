@@ -90,6 +90,12 @@
                         </ul>
                     </div>
                 </li>
+                <li>
+                    <a class="c-navbar__link {{ viewBag.activeMenu is same as('contact') ? 'text-white' : 'text-gray-400' }}"
+                        href="{{ 'contact'|page(false) }}">
+                        Contacto
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

@@ -25,3 +25,13 @@
         @apply list-disc list-inside pb-3;
     }
 }
+
+@mixin color-switcher($firstColor, $secondColor) {
+    color: $firstColor;
+    background-color: $secondColor;
+
+    &:hover {
+        color: $secondColor;
+        background-color: $firstColor;
+    }
+}

@@ -1,0 +1,16 @@
+title = "Contacto"
+url = "/contacto"
+layout = "main"
+
+[contactRequest]
+
+[viewBag]
+activeMenu = "contact"
+==
+<section id="contact_component"
+    class="c-contact">
+    <h1 class="c-contact__title u-primary-text-shadow">
+        Contacto
+    </h1>
+    {% component 'contactRequest' %}
+</section>

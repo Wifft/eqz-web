@@ -1,0 +1,17 @@
+plugin:
+    name: Contact
+    description: 'Plugin to manage contact requests.'
+    author: Wifft
+    icon: oc-icon-users
+permissions:
+    'js.contact::permission.visibility':
+        tab: 'js.contact::lang.plugin.name'
+        label: 'js.contact::lang.plugin.permissions.visibility.label'
+navigation:
+    main-menu-contact:
+        label: 'js.contact::lang.plugin.name'
+        url: js/contact/requests
+        icon: icon-users
+        permissions:
+            - 'js.contact::permission.visibility'
+        order: '398'

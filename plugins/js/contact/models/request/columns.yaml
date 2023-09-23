@@ -1,0 +1,16 @@
+columns:
+    name:
+        label: 'js.contact::lang.fields.name'
+        searchable: true
+        sortable: true
+        type: 'text'
+    email:
+        label: 'js.contact::lang.fields.email'
+        searchable: true
+        sortable: true
+        type: 'text'
+    created_at:
+        label: 'js.contact::lang.fields.sent_at'
+        searchable: false
+        sortable: true
+        type: 'datetime'

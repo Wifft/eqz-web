@@ -64,6 +64,44 @@
         }
     }
 
+    &-socials {
+        &__container {
+            &--flex {
+                @apply flex
+                    items-center
+                    justify-center
+                    mb-6;
+            }
+
+            &--grid {
+                @apply flex
+                    flex-wrap
+                    justify-center
+                    gap-x-4;
+            }
+        }
+
+        &__item {
+            color: theme('colors.primary');
+            background-color: theme('colors.secondary--translucent');
+
+            @apply text-xl
+                rounded-full
+                backdrop-blur-sm
+                px-4
+                py-3
+                ease-in
+                transition-all
+                duration-200;
+
+            &:hover {
+                color: theme('colors.secondary--translucent');
+
+                @apply bg-white;
+            }
+        }
+    }
+
     &__white-line {
         max-width: 685px;
 

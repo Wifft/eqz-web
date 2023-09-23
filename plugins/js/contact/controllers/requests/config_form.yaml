@@ -1,0 +1,10 @@
+name: Requests
+form: $/js/contact/models/request/fields.yaml
+modelClass: JS\Contact\Models\Request
+defaultRedirect: js/contact/requests
+create:
+    redirect: 'js/contact/requests/update/:id'
+    redirectClose: js/contact/requests
+update:
+    redirect: js/contact/requests
+    redirectClose: js/contact/requests

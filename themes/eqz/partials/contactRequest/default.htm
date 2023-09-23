@@ -1,0 +1,54 @@
+<div class="c-contact__container">
+    {{ form_ajax(__SELF__ ~ '::onSubmitContactForm', {'id': 'js-contact-form', 'class': 'c-contact-form', 'success': 'this.reset()'}) }}
+        <div class="form-group">
+            <input class="c-contact-form__control"
+                type="text"
+                name="name"
+                required="required"
+                placeholder="Nombre"/>
+        </div>
+        <div class="c-contact-form__group">
+            <input class="c-contact-form__control"
+                type="email"
+                name="email"
+                required="required"
+                placeholder="E-mail"/>
+        </div>
+        <div class="form-group">
+            <textarea  class="c-contact-form__control"
+                name="msg"
+                required="required"
+                placeholder="Mensaje"
+                rows="1"></textarea>
+        </div>
+        <div id="privacy_policy" class="c-contact-form__group">
+            <label>
+                <input class="form-check-input p-0"
+                    type="checkbox"
+                    name="policy"
+                    required="required"/>
+                <span class="text-white">
+                    He leído y acepto la&nbsp;
+                    <a href="{{ 'legal-text'|page({'slug': 'politica-de-privacidad'}) }}"
+                        target="_blank">
+                        política de privacidad
+                    </a>
+                </span>
+            </label>
+        </div>
+        <div class="c-contact-form__group">
+            <button class="c-btn--primary g-recaptcha"
+                data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"
+                data-callback="onSubmit"
+                data-action="submit"
+                data-tabindex="9999999999999999">
+                Enviar
+            </button>
+        </div>
+    {{ form_close() }}
+    <script>
+        function onSubmit(token) {
+            $("#js-contact-form").submit();
+        }
+    </script>
+</div>

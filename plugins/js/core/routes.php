@@ -38,7 +38,7 @@ Route::get(
         Last update: 12/03/2023.
         Standards: HTML 5.3, CSS 3, PHP 8.1.
         Components: Tailwind 3.
-        Software: OctoberCMS 3.2.21.
+        Software: OctoberCMS 3.5.0.
         EOL
     )
         ->header("Content-Type", "text/plain")

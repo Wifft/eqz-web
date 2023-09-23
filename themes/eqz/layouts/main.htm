@@ -59,6 +59,7 @@ function onStart() : void
                 href="{{ this.page.id|page(false) }}"/>
         {% endif %}
         {% partial 'site/head-styles' only %}
+        <script src="https://www.google.com/recaptcha/enterprise.js?render={{ env('RECAPTCHA_SITE_KEY') }}"></script>
     </head>
     <body>
         {% if not maintenanceMode %}

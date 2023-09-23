@@ -1,0 +1,20 @@
+fields:
+    name:
+        label: 'js.contact::lang.fields.name'
+        span: 'full'
+        required: true
+        readOnly: true
+        type: 'text'
+    email:
+        label: 'js.contact::lang.fields.email'
+        span: 'full'
+        required: true
+        readOnly: true
+        type: 'text'
+    msg:
+        label: 'js.contact::lang.fields.msg'
+        span: 'full'
+        required: true
+        readOnly: true
+        type: 'textarea'
+

@@ -15,17 +15,37 @@
         </div>
     </div>
     <hr class="c-footer__white-line"/>
-    <div class="c-footer__logo">
-        <a href="{{ 'home'|page(false) }}">
-            <picture>
-                <img src="{{ 'assets/img/eqz_logo.webp'|theme }}"
-                    alt="{{ env('APP_NAME') }}"
-                    title="{{ env('APP_NAME') }}"/>
-            </picture>
-            <span>
-                {{ env('APP_NAME') }}
-            </span>
-        </a>
+    <div class="c-footer-socials__container--flex">
+        <div class="c-footer-socials__container--grid">
+            <a class="c-footer-socials__item"
+                href="https://x.com/eQuizersEC"
+                target="_blank"
+                rel="external noopener noreferrer"
+                title="X">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a class="c-footer-socials__item"
+                href="https://www.tiktok.com/@equizers"
+                target="_blank"
+                rel="external noopener noreferrer"
+                title="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a class="c-footer-socials__item"
+                href="https://www.youtube.com/@eQuizersEC"
+                target="_blank"
+                rel="external noopener noreferrer"
+                title="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a class="c-footer-socials__item"
+                href="https://www.twitch.tv/equizersec"
+                target="_blank"
+                rel="external noopener noreferrer"
+                title="Twitch">
+                <i class="fa-brands fa-twitch"></i>
+            </a>
+        </div>
     </div>
     <div class="c-footer__legal-texts">
         <ul>
@@ -37,6 +57,18 @@
                 </li>
             {% endfor %}
         </ul>
+    </div>
+    <div class="c-footer__logo">
+        <a href="{{ 'home'|page(false) }}">
+            <picture>
+                <img src="{{ 'assets/img/eqz_logo.webp'|theme }}"
+                    alt="{{ env('APP_NAME') }}"
+                    title="{{ env('APP_NAME') }}"/>
+            </picture>
+            <span>
+                {{ env('APP_NAME') }}
+            </span>
+        </a>
     </div>
     <span class="c-footer__copyright">
         &copy;&nbsp;{{ 'now'|date('Y') }} by

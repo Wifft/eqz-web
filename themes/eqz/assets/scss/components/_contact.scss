@@ -1,0 +1,51 @@
+.c-contact {
+    background-color: theme('colors.secondary--translucent');
+
+    @apply pt-4
+        pb-8;
+
+    &__title {
+        @apply text-6xl
+            text-center
+            font-bold
+            uppercase
+            py-10;
+    }
+
+    &__container {
+        @apply container
+            mx-auto;
+    }
+
+    &-form {
+        @apply text-center;
+
+        &__control {
+            @apply my-4
+                w-full;
+
+            @screen xl {
+                width: 1200px;
+            }
+        }
+
+        textarea {
+            height: 300px;
+        }
+
+        #privacy_policy {
+            @apply mb-4;
+
+            a {
+                color: theme('colors.primary');
+
+                @apply underline;
+            }
+        }
+    }
+
+    &__form-group {
+        @apply relative
+            mb-6;
+    }
+}

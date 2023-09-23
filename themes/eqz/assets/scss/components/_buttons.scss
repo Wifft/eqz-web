@@ -1,14 +1,4 @@
 .c-btn {
-    @mixin color-switcher($firstColor, $secondColor) {
-        color: $firstColor;
-        background-color: $secondColor;
-
-        &:hover {
-            color: $secondColor;
-            background-color: $firstColor;
-        }
-    }
-
     @mixin square-plain-btn($firstColor, $secondColor) {
         @apply p-2
             uppercase

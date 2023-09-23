@@ -2,18 +2,18 @@
 
 namespace Samuell\ContentEditor\Http\Controllers;
 
-use File;
-use Lang;
-use Input;
-use Response;
-use Exception;
-use SystemException;
 use ApplicationException;
-use Media\Classes\MediaLibrary;
-use October\Rain\Resize\Resizer;
+use Exception;
+use File;
 use Illuminate\Routing\Controller;
-use Samuell\ContentEditor\Models\Settings;
+use Input;
+use Lang;
+use Media\Classes\MediaLibrary;
 use October\Rain\Filesystem\Definitions as FileDefinitions;
+use October\Rain\Resize\Resizer;
+use Response;
+use Samuell\ContentEditor\Models\Settings;
+use SystemException;
 
 /**
  * ImageController
@@ -69,10 +69,10 @@ class ImageController extends Controller
             list($width, $height) = getimagesize($uploadedFile);
 
             return Response::json([
-                'url'      => MediaLibrary::instance()->getPathUrl($path . '/' . $fileName),
+                'url' => MediaLibrary::instance()->getPathUrl($path . '/' . $fileName),
                 'filePath' => $path . '/' . $fileName,
                 'filename' => $fileName,
-                'size'     => [
+                'size' => [
                     $width,
                     $height
                 ]
@@ -89,7 +89,7 @@ class ImageController extends Controller
         $width = post('width');
         $height = post('height');
         $filePath = post('filePath');
-        $relativeFilePath = config('cms.storage.media.path', config('system.storage.media.path')) . $filePath;
+        $relativeFilePath = config('cms.storage.media.path', config('filesystems.disks.media.url')) . $filePath;
 
         if ($crop && $crop != '0,0,1,1') {
             $crop = explode(',', $crop);
@@ -124,12 +124,12 @@ class ImageController extends Controller
         }
 
         return Response::json([
-            'url'       => $url,
-            'filePath'  => $relativeFilePath,
-            'width'     => $width,
-            'crop'      => post('crop'),
-            'alt'       => post('alt'),
-            'size'      => [
+            'url' => $url,
+            'filePath' => $relativeFilePath,
+            'width' => $width,
+            'crop' => post('crop'),
+            'alt' => post('alt'),
+            'size' => [
                 $width,
                 $height
             ]
