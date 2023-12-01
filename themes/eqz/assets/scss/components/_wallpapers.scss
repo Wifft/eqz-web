@@ -49,18 +49,17 @@
                 @apply py-4;
 
                 a {
+                    color: theme('colors.primary');
                     background-color: theme('colors.secondary');
 
-                    @apply text-white
-                        p-2
+                    @apply p-2
                         uppercase
                         transition-all
                         duration-300;
 
                     &:hover {
                         color: theme('colors.secondary');
-
-                        @apply bg-white;
+                        background-color: theme('colors.primary');
                     }
                 }
             }

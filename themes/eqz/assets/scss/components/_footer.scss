@@ -96,8 +96,7 @@
 
             &:hover {
                 color: theme('colors.secondary--translucent');
-
-                @apply bg-white;
+                background-color: theme('colors.primary--translucent');
             }
         }
     }

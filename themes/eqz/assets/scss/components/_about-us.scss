@@ -27,7 +27,7 @@
     }
 
     &__info {
-        @apply text-white;
+        color: theme('colors.primary');
 
         h1 {
             @apply text-center
